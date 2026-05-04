@@ -3,82 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenges | CK Funded Pro</title>
+    <title>CK Funded Pro | The Future of Prop Trading</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#050505] text-white font-sans">
+<body>
 
-    <nav class="p-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html"><img src="logo.png" alt="Logo" class="h-8"></a>
-            <div class="flex gap-8">
-                <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
-                <a href="challenge.html" class="text-[#ffb800] font-bold">Challenge</a>
-                <a href="dashboard.html" class="text-gray-400 hover:text-white">Dashboard</a>
-            </div>
+    <div class="video-bg-container">
+        <video autoplay muted loop playsinline>
+            <source src="ck-bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-gradient"></div>
+    </div>
+
+    <nav class="navbar-top">
+    <div class="brand-container stacked-logo logo-animate">
+        <img src="logo.jpeg" alt="CK" class="brand-logo">
+        <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="./index.html" class="hover:text-[#ffb800] transition-colors">Home</a></li>
+        <li><a href="./challenge.html" class="active">Challenge</a></li>
+        <li><a href="./dashboard.html" class="hover:text-[#ffb800] transition-colors">Dashboard</a></li>
+        <li><a href="./about.html" class="hover:text-[#ffb800] transition-colors">About</a></li>
+        <li><a href="./blog.html" class="hover:text-[#ffb800] transition-colors">Blog</a></li>
+        <li><a href="./affiliate.html" class="hover:text-[#ffb800] transition-colors">Affiliate</a></li>
+        <li><a href="./careers.html" class="hover:text-[#ffb800] transition-colors">Careers</a></li>
+        <li><a href="./awards.html" class="hover:text-[#ffb800] transition-colors">Awards</a></li>
+        <li><a href="./investors.html" class="hover:text-[#ffb800] transition-colors">Investors</a></li>
+        <li><a href="./faq.html" class="hover:text-[#ffb800] transition-colors">FAQ</a></li>
+        <li><a href="./contact.html" class="hover:text-[#ffb800] transition-colors">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+        <a href="#" class="btn-login">Login</a>
+        <a href="#" class="btn-cta">Get Started</a>
+    </div>
+</nav>
+
+    <section id="Challenge" class="challenge-config-section py-20 relative z-10">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="mb-12 text-center lg:text-left">
+            <h2 class="text-4xl font-black text-white mb-4">Choose Your Challenge</h2>
+            <p class="text-gray-400 max-w-2xl">Select your funding model and account size. Rules and pricing will update automatically.</p>
         </div>
-    </nav>
 
-    <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h1 class="text-6xl font-black tracking-tighter mb-4">PICK YOUR ACCOUNT</h1>
-                <p class="text-gray-400">Choose the size and model that fits your trading style.</p>
+        <div class="configurator-container bg-[#0d0d0d] border border-[#1a1a1a] rounded-[32px] p-8 md:p-12">
+            
+            <div class="mb-10">
+                <label class="block text-gray-500 text-xs font-bold uppercase tracking-widest mb-4">Select Account Size</label>
+                <div class="flex flex-wrap gap-3" id="size-selector-container">
+                    </div>
             </div>
 
-            <div class="bg-[#111] border border-white/10 rounded-[40px] p-8 lg:p-12">
-                
-                <div class="mb-12">
-                    <label class="text-gray-500 uppercase text-xs font-bold tracking-[0.2em] mb-6 block">01. Select Capital Size</label>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
-                        <button onclick="updatePrice(32)" class="size-btn py-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#ffb800] transition-all font-bold active-size">$5,000</button>
-                        <button onclick="updatePrice(54)" class="size-btn py-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#ffb800] transition-all font-bold">$10,000</button>
-                        <button onclick="updatePrice(129)" class="size-btn py-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#ffb800] transition-all font-bold">$25,000</button>
-                        <button onclick="updatePrice(249)" class="size-btn py-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#ffb800] transition-all font-bold">$50,000</button>
-                        <button onclick="updatePrice(479)" class="size-btn py-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#ffb800] transition-all font-bold">$100,000</button>
-                    </div>
+            <div class="mb-10">
+                <label class="block text-gray-500 text-xs font-bold uppercase tracking-widest mb-4">Select Model</label>
+                <div class="flex gap-3 bg-[#141414] p-2 rounded-2xl w-full">
+                    <button onclick="changeModel('1step')" id="btn-1step" class="model-pill flex-1 py-4 rounded-xl font-bold transition-all text-lg">1-Step</button>
+                    <button onclick="changeModel('2step')" id="btn-2step" class="model-pill flex-1 py-4 rounded-xl font-bold transition-all text-lg">2-Step</button>
+                    <button onclick="changeModel('instant')" id="btn-instant" class="model-pill flex-1 py-4 rounded-xl font-bold transition-all text-lg">Instant</button>
                 </div>
+            </div>
 
-                <div class="mb-12">
-                    <label class="text-gray-500 uppercase text-xs font-bold tracking-[0.2em] mb-6 block">02. Select Evaluation Type</label>
-                    <div class="flex gap-4">
-                        <button class="flex-1 py-4 rounded-xl border border-[#ffb800] bg-[#ffb800] text-black font-black">2-Step Evaluation</button>
-                        <button class="flex-1 py-4 rounded-xl border border-white/10 bg-white/5 text-white font-black opacity-50 cursor-not-allowed">1-Step (Coming Soon)</button>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-8 border-t border-white/5">
+            <div id="details-view" class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 border-t border-[#1a1a1a] opacity-0 translate-y-4 transition-all duration-500">
+                <div class="bg-[#141414] rounded-3xl p-8">
+                    <h3 class="text-xl font-bold mb-6">Challenge Details</h3>
                     <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-4">
+                        <div class="flex justify-between border-b border-white/5 pb-3">
                             <span class="text-gray-400">Profit Target</span>
-                            <span class="font-bold">10% / 5%</span>
+                            <strong id="stat-target" class="text-white">--</strong>
                         </div>
-                        <div class="flex justify-between border-b border-white/5 pb-4">
-                            <span class="text-gray-400">Daily Loss</span>
-                            <span class="font-bold text-red-500">5% (Equity Based)</span>
+                        <div class="flex justify-between border-b border-white/5 pb-3">
+                            <span class="text-gray-400">Max Daily Loss</span>
+                            <strong id="stat-daily" class="text-white">--</strong>
                         </div>
-                        <div class="flex justify-between border-b border-white/5 pb-4">
+                        <div class="flex justify-between border-b border-white/5 pb-3">
                             <span class="text-gray-400">Max Overall Loss</span>
-                            <span class="font-bold text-red-500">10%</span>
+                            <strong id="stat-overall" class="text-white">--</strong>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-400">Leverage</span>
-                            <span class="font-bold text-[#ffb800]">1:100</span>
+                            <span class="text-gray-400">Profit Split</span>
+                            <strong id="stat-split" class="text-white">Up to 95%</strong>
                         </div>
                     </div>
+                </div>
 
-                    <div class="bg-white/5 rounded-3xl p-8 text-center flex flex-col justify-center border border-white/5">
-                        <p class="text-xs text-gray-500 uppercase font-bold mb-2">Total to Pay</p>
-                        <div class="text-7xl font-black mb-8" id="display-price">$32.00</div>
-                        <button class="w-full py-5 bg-[#ffb800] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,184,0,0.2)]">
-                            Start Challenge
-                        </button>
+                <div class="flex flex-col justify-center items-center lg:items-end">
+                    <div class="inline-block border border-dashed border-[#ffb800] text-[#ffb800] px-4 py-1 rounded-md text-xs font-bold mb-4">
+                        GET 20% OFF WITH CODE 'TRADE20'
                     </div>
+                    <div class="text-gray-400 text-lg mb-1">Price</div>
+                    <div id="display-price" class="text-6xl font-black text-white mb-8">$0.00</div>
+                    <button class="w-full lg:w-auto bg-[#ffb800] text-black px-12 py-5 rounded-2xl font-black uppercase text-xl hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,184,0,0.3)]">
+                        Start Challenge
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    .challenge-config-section { padding-top: 140px; }
+    .model-pill { color: #666; background: transparent; }
+    .model-pill.active { background: #ffb800; color: #000; box-shadow: 0 4px 15px rgba(255,184,0,0.2); }
+    .size-pill { background: #141414; border: 1px solid #1a1a1a; color: #fff; }
+    .size-pill.active { background: #fff; color: #000; border-color: #fff; }
+    #details-view.show { opacity: 1; transform: translateY(0); }
+</style>
+
+<script>
+    const challengeData = {
+        "1step": {
+            target: "8%", daily: "4%", overall: "8%",
+            prices: {"5000": 23.00, "10000": 33.00, "25000": 53.00, "50000": 123.00, "100000": 199.00, "200000": 499.00}
+        },
+        "2step": {
+            target: "8% / 5%", daily: "5%", overall: "10%",
+            prices: {"5000": 27.00, "10000": 37.00, "25000": 57.00, "50000": 127.00, "100000": 201.00, "200000": 507.00}
+        },
+        "instant": {
+            target: "Direct Funding", daily: "3%", overall: "5%",
+            prices: {"1000": 1.00, "2500": 30.00, "5000": 50.00}
+        }
+    };
+
+    let activeModel = '2step';
+
+    function renderSizes() {
+        const container = document.getElementById('size-selector-container');
+        container.innerHTML = '';
+        const sizes = Object.keys(challengeData[activeModel].prices);
+        
+        sizes.forEach(size => {
+            const btn = document.createElement('button');
+            btn.className = 'size-pill px-6 py-3 rounded-xl font-bold transition-all';
+            btn.innerText = `$${parseInt(size).toLocaleString()}`;
+            btn.onclick = () => selectSize(size, btn);
+            container.appendChild(btn);
+        });
+        document.getElementById('details-view').classList.remove('show');
+    }
+
+    function changeModel(model) {
+        activeModel = model;
+        document.querySelectorAll('.model-pill').forEach(b => b.classList.remove('active'));
+        document.getElementById(`btn-${model}`).classList.add('active');
+        renderSizes();
+    }
+
+    function selectSize(size, element) {
+        document.querySelectorAll('.size-pill').forEach(b => b.classList.remove('active'));
+        element.classList.add('active');
+        
+        const info = challengeData[activeModel];
+        document.getElementById('stat-target').innerText = info.target;
+        document.getElementById('stat-daily').innerText = info.daily;
+        document.getElementById('stat-overall').innerText = info.overall;
+        document.getElementById('display-price').innerText = `$${info.prices[size].toFixed(2)}`;
+        
+        document.getElementById('details-view').classList.add('show');
+    }
+
+    // Init
+    changeModel('2step');
+</script>
 
     <script>
         function updatePrice(price) {
@@ -93,5 +184,94 @@
             event.target.classList.add('bg-white', 'text-black', 'border-[#ffb800]');
         }
     </script>
+
+    <!-- START FOOTER -->
+<footer class="bg-black pt-24 pb-12 border-t border-white/5 relative z-10">
+    <div class="max-w-7xl mx-auto px-4">
+        
+        <!-- Top Grid: Logo, Socials, and Links -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+            
+            <!-- Brand Column -->
+            <div class="lg:col-span-5">
+                <img src="logo.png" alt="Pipstone Capital" class="h-10 mb-8">
+                <hr class="border-white/10 mb-8 w-full">
+                
+                <!-- Social Icons -->
+                <div class="flex gap-4 text-[#ffb800]">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-all"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-all"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-all"><i class="fa-brands fa-discord text-xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-all"><i class="fa-brands fa-youtube text-xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-all"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-all"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Links: Main -->
+            <div class="lg:col-span-2">
+                <h4 class="text-white font-bold mb-6">Main</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Challenges</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Affiliate Program</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Links: Secondary -->
+            <div class="lg:col-span-2">
+                <h4 class="text-white font-bold mb-6">Secondary</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Blogs</a></li>
+                </ul>
+            </div>
+
+            <!-- Links: Extra -->
+            <div class="lg:col-span-3">
+                <h4 class="text-white font-bold mb-6">Extra</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Restricted Countries</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Middle: Disclaimers -->
+        <div class="space-y-6 text-gray-500 text-xs leading-relaxed max-w-5xl mb-16">
+            <p>Pipstone – FZCO is a trader evaluation and educational platform registered in Dubai, United Arab Emirates. We are not a brokerage, financial institution, or provider of investment services. All activities on our platform take place in a fully simulated environment for skill assessment and educational purposes only. No real capital is traded, and users do not receive access to live trading accounts.</p>
+            <p>Our programs are designed to evaluate a participant’s trading discipline, risk management, and consistency using demo-based performance models. Any references to compensation, rewards, or payouts are based solely on performance in simulated environments and do not represent trading profits or returns.</p>
+            <p>Pipstone – FZCO operates from IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE. All program fees are final, non-refundable, and solely cover operational services such as platform access, support, and infrastructure. These fees are not considered deposits or investments.</p>
+            <p>The content provided on pipstonecapital.com is for general informational and educational purposes only and should not be interpreted as financial or investment advice. By using our platform, you agree to be bound by the applicable laws of the United Arab Emirates and acknowledge that Pipstone – FZCO does not conduct any regulated financial activities.</p>
+        </div>
+
+        <!-- Bottom: Copyright & Payments -->
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-gray-500 text-sm">© 2026 Pipstone Capital</p>
+            
+            <div class="flex flex-wrap items-center gap-4 grayscale opacity-70">
+                <span class="text-gray-500 text-xs mr-2">Secured Payment</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-4" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" class="h-6" alt="Mastercard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-5" alt="PayPal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Google_Pay_%28GPay%29_Logo_%282018-2020%29.svg" class="h-5" alt="GPay">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" class="h-6" alt="BTC">
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Floating Chat Button (Optional, as seen in your screenshot) -->
+<div class="fixed bottom-6 right-6 z-50">
+    <button class="w-14 h-14 bg-[#ffb800] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+</div>
+
+
 </body>
 </html>
