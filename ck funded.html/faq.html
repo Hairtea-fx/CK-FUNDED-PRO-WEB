@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | CK Funded Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .faq-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(255, 184, 0, 0.15) 0%, transparent 50%);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-item.active i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-white font-sans">
+
+    <nav class="p-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-[#050505]/80">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="h-8"></a>
+            <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest text-gray-400">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="challenge.html" class="hover:text-white transition-colors">Rules</a>
+                <a href="affiliates.html" class="hover:text-white transition-colors">Affiliates</a>
+                <a href="faq.html" class="text-[#ffb800]">FAQ</a>
+            </div>
+            <a href="challenge.html" class="bg-[#ffb800] text-black px-6 py-2 rounded-full font-black text-xs uppercase">Start Challenge</a>
+        </div>
+    </nav>
+
+    <section class="py-20 faq-gradient">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-6 uppercase">How can we <span class="text-[#ffb800]">help?</span></h1>
+            <div class="relative mt-10">
+                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                <input type="text" placeholder="Search for rules, payouts, or platforms..." class="w-full bg-white/5 border border-white/10 p-5 pl-14 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#ffb800] transition-all">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="mb-12">
+                <h2 class="text-xl font-black uppercase tracking-widest text-[#ffb800] mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-circle-info"></i> General Information
+                </h2>
+                <div class="space-y-4">
+                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
+                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                            <span class="font-bold">What is CK Funded Pro?</span>
+                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
+                                CK Funded Pro is a proprietary firm that provides traders with up to $200,000 in virtual capital. Traders keep up to 90% of the profits they generate while we cover all the potential losses.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
+                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                            <span class="font-bold">Who is eligible to join?</span>
+                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
+                                Anyone over the age of 18 from any country (excluding restricted jurisdictions) can sign up and participate in our evaluation process.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="text-xl font-black uppercase tracking-widest text-[#ffb800] mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-chart-line"></i> Trading Rules
+                </h2>
+                <div class="space-y-4">
+                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
+                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                            <span class="font-bold">What are the drawdown limits?</span>
+                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
+                                We utilize a 5% Daily Drawdown and a 10% Maximum Overall Drawdown. These are calculated based on your starting balance or the equity at the end of the previous day, whichever is higher.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
+                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                            <span class="font-bold">Are news trading and EAs allowed?</span>
+                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
+                                Yes! CK Funded Pro is designed for professionals. We allow News Trading, EAs (Expert Advisors), and weekend holding on our Pro accounts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-xl mx-auto px-4 text-center bg-[#ffb800] p-12 rounded-[50px] text-black">
+            <h3 class="text-3xl font-black italic mb-4">Still have questions?</h3>
+            <p class="font-bold opacity-80 mb-8">Our support team is available 24/7 via Live Chat and Email.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:support@ckfundedpro.com" class="bg-black text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-sm">Email Support</a>
+                <a href="#" class="border-2 border-black px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-sm">Live Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-xs">
+        <p>© 2024 CK Funded Pro. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items (Optional)
+            document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
