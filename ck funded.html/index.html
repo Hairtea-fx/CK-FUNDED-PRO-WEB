@@ -25,12 +25,12 @@
 
     <ul class="nav-menu">
         <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#Challenge">Challenge</a></li>
-        <li><a href="#Dashboard">Dashboard</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Blog">Blog</a></li>
-        <li><a href="#Affliate">Affliate</a></li>
-        <li><a href="#Careers">Careers</a></li>
+        <li><a href="./challenge.html" class="hover:text-[#ffb800] transition-colors">Challenge</a></li>
+        <li><a href="./dashboard.html" class="hover:text-[#ffb800] transition-colors">Dashboard</a></li>
+        <li><a href="about.html" class="hover:text-[#ffb800] transition-colors">About</a></li>
+        <li><a href="blog.html" class="hover:text-[#ffb800] transition-colors">Blog</a></li>
+        <li><a href="affiliate.html" class="hover:text-[#ffb800] transition-colors">Affiliate</a></li>
+        <li><a href="careers.html" class="hover:text-[#ffb800] transition-colors">Careers</a></li>
         <li><a href="#Awards">Awards</a></li>
         <li><a href="#Investors">Investors</a></li>
         <li><a href="#FAQ">FAQ</a></li>
@@ -986,6 +986,86 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
     </button>
 </div>
+
+<section id="ChallengePage" class="py-24 bg-[#050505] min-h-screen relative z-10">
+    <div class="max-w-7xl mx-auto px-4">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-6xl font-black text-white tracking-tighter mb-4">Choose Your Challenge</h2>
+            <p class="text-gray-400 text-lg">Select your preferred funding model and account size.</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[40px] p-8 lg:p-12 shadow-2xl">
+            
+            <div class="mb-12">
+                <label class="text-gray-500 uppercase text-xs font-black tracking-widest mb-6 block">1. Select Account Size</label>
+                <div class="flex flex-wrap gap-3">
+                    <button class="px-8 py-4 rounded-2xl bg-white text-black font-black transition-all hover:scale-105">$5,000</button>
+                    <button class="px-8 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-black hover:bg-white/10 transition-all">$10,000</button>
+                    <button class="px-8 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-black hover:bg-white/10 transition-all">$25,000</button>
+                    <button class="px-8 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-black hover:bg-white/10 transition-all">$50,000</button>
+                    <button class="px-8 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-black hover:bg-white/10 transition-all">$100,000</button>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <label class="text-gray-500 uppercase text-xs font-black tracking-widest mb-6 block">2. Select Model</label>
+                <div class="flex gap-4">
+                    <button class="flex-1 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-black hover:bg-white/10 transition-all">1-Step</button>
+                    <button class="flex-1 py-4 rounded-2xl bg-[#ffb800] text-black font-black shadow-[0_0_30px_rgba(255,184,0,0.2)] transition-all">2-Step</button>
+                    <button class="flex-1 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-black hover:bg-white/10 transition-all">Instant</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-2">
+                    <div class="flex justify-between py-5 border-b border-white/5">
+                        <span class="text-gray-400">Profit Target</span>
+                        <span class="text-white font-bold text-xl">10% / 5%</span>
+                    </div>
+                    <div class="flex justify-between py-5 border-b border-white/5">
+                        <span class="text-gray-400">Daily Loss Limit</span>
+                        <span class="text-red-500 font-bold text-xl">5%</span>
+                    </div>
+                    <div class="flex justify-between py-5 border-b border-white/5">
+                        <span class="text-gray-400">Maximum Drawdown</span>
+                        <span class="text-red-500 font-bold text-xl">10%</span>
+                    </div>
+                    <div class="flex justify-between py-5 border-b border-white/5">
+                        <span class="text-gray-400">Trading Period</span>
+                        <span class="text-white font-bold text-xl">Unlimited</span>
+                    </div>
+                    <div class="flex justify-between py-5 border-b border-white/5">
+                        <span class="text-gray-400">Min. Trading Days</span>
+                        <span class="text-white font-bold text-xl">0 Days</span>
+                    </div>
+                    <div class="flex justify-between py-5">
+                        <span class="text-gray-400">Leverage</span>
+                        <span class="text-white font-bold text-xl">1:100</span>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-[32px] p-12 text-center relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h4 class="text-gray-400 font-bold uppercase text-xs tracking-widest mb-2">Challenge Fee</h4>
+                        <div class="text-8xl font-black text-white mb-8">$32.00</div>
+                        <button class="w-full py-6 bg-[#ffb800] text-black font-black rounded-2xl text-xl uppercase tracking-tighter hover:scale-[1.02] transition-transform shadow-[0_10px_40px_rgba(255,184,0,0.3)]">
+                            Buy Challenge Now
+                        </button>
+                        <p class="mt-6 text-gray-500 text-sm italic">Fully Refundable Fee</p>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#ffb800]/20 blur-[80px] rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+// DELETE OR COMMENT OUT THIS SECTION IF YOU SEE IT:
+$('a[href*="#"]').on('click', function(e) {
+    e.preventDefault(); // This is the line that kills your new page link!
+    // ... scrolling logic ...
+});
 
 </body>
 </html>
