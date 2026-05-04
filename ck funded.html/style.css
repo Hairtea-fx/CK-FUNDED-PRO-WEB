@@ -523,3 +523,834 @@ body {
     /* 7 second loop, infinite, easing in and out for natural rhythm */
     animation: highFrequencyPulse 7s infinite ease-in-out;
 }
+
+.trustpilot-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+.tp-text {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tp-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star-box {
+    background-color: #00b67a; /* Trustpilot Green */
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* For the 4.5 star look */
+.star-box.half {
+    background: linear-gradient(90deg, #00b67a 75%, #dcdce6 75%);
+}
+
+.tp-brand {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tp-star-icon {
+    color: #00b67a;
+    font-size: 22px;
+}
+
+.trustpilot-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    /* REDUCE THIS LINE: Changed from 15px to -10px to pull it up */
+    margin: -10px 0 40px 0; 
+    
+    font-family: Arial, sans-serif;
+}
+
+.features-section {
+    padding: 80px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 184, 0, 0.3);
+}
+
+.icon-circle {
+    background-color: #ffb800; /* CK Gold */
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.feature-card h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #888;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 1. Add more space to the top of the NEW section */
+.features-section {
+    padding: 100px 0; /* Increased padding */
+    background-color: #000;
+    text-align: center;
+    clear: both; /* Ensures it starts after previous elements */
+    margin-top: 50px; /* Pushes it away from the cards above */
+}
+
+/* 2. Fix the Title spacing so it's not hidden */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 60px; /* Space between title and the 6 cards */
+    color: #fff;
+    position: relative;
+    z-index: 10; /* Ensures the text stays on top */
+}
+
+/* 3. Adjust the grid to ensure it doesn't overlap */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Slightly wider gap for a cleaner look */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.features-section {
+    width: 100%;
+    /* This adds 120px of empty space at the top to stop the overlap */
+    padding: 120px 0 80px 0; 
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    /* This ensures the title stays in the middle and away from the grid below */
+    margin-bottom: 80px; 
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* This centers the entire block of content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the container itself */
+    padding: 0 20px; /* Prevents text from touching screen edges */
+}
+
+.features-section {
+    width: 100%;
+    /* Use padding to push the title away from the section above it */
+    padding: 100px 0; 
+    background-color: #000;
+    /* This ensures it starts on a fresh line and doesn't float into others */
+    display: block;
+    clear: both; 
+}
+
+.section-title {
+    text-align: center; /* Centers the text */
+    width: 100%;
+    margin-bottom: 60px; /* Creates space between title and the cards */
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.features-section {
+    width: 100%;
+    /* 1. Add a huge buffer at the top to clear the previous cards */
+    padding-top: 250px; 
+    padding-bottom: 100px;
+    
+    background-color: #000;
+    
+    /* 2. This ensures the section stays below everything else */
+    position: relative; 
+    display: block;
+    clear: both; 
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    width: 100%;
+    /* 3. Space between title and the 6 cards below it */
+    margin-bottom: 80px; 
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.features-section {
+    width: 100%;
+    padding-top: 150px; 
+    padding-bottom: 100px;
+    
+    /* 1. Remove background-color: #000; and add this instead: */
+    background: transparent; 
+    
+    /* 2. Add a slight dark gradient at the top if you want the text to pop */
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+    
+    position: relative; 
+    display: block;
+    clear: both; 
+    z-index: 1;
+}
+
+.section-divider {
+    width: 100%;
+    height: 60px; /* Adjust height for more or less curve */
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    margin-top: -30px; /* Pulls it up to overlap the previous section slightly */
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%; /* Makes the curve wider than the screen */
+    height: 100%;
+    background: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* The subtle gray line */
+    border-radius: 50% 50% 0 0; /* Creates the curve */
+}
+
+.section-divider {
+    width: 100%;
+    height: 100px; /* Increased height to give the cards above more room */
+    background: transparent; /* Changed from black to show the car background */
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    /* Remove the negative margin-top so it doesn't jump up into the cards */
+    margin-top: 0; 
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the divider div */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%; /* Wider for a smoother, flatter curve */
+    height: 200%;
+    background: #000; /* This creates the solid black "floor" of the new section */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50% 50% 0 0;
+}
+
+.section-divider {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    /* REMOVE any negative margin-top here */
+    margin-top: 0; 
+    z-index: 5;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%; 
+    height: 200%;
+    background: #000; 
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50% 50% 0 0;
+}
+
+.features-section {
+    background-color: #000;
+    /* This pushes the "Why Join" content away from the line */
+    padding-top: 60px; 
+    position: relative;
+    z-index: 10;
+    margin-top: -1px; /* This "glues" it to the divider line */
+}
+
+.trustpilot-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    /* Pushes the bar UP (-25px) and keeps space below it (30px) */
+    margin: -25px 0 30px 0; 
+    
+    position: relative;
+    z-index: 20; /* Ensures it stays above any background glows */
+    font-family: Arial, sans-serif;
+}
+
+.features-section {
+    width: 100%;
+    padding: 80px 0;
+    
+    /* 1. Remove background-color: #000; */
+    /* 2. Add transparency so the hero background shows through */
+    background: transparent; 
+    
+    /* 3. Optional: Add a subtle fade so the bottom of the section transitions nicely */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    
+    position: relative;
+    z-index: 10;
+}
+
+/* Ensure the container doesn't have a background either */
+.features-section .container {
+    background: transparent;
+}
+
+.section-divider {
+    width: 100%;
+    height: 1px; /* The single line thickness */
+    position: relative;
+    /* Adjust this margin to position it perfectly between the card rows */
+    margin: 40px 0; 
+    
+    /* This creates the "fade-out" effect on the left and right sides */
+    background: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    
+    z-index: 10;
+}
+
+/* Optional: Add a subtle neon glow behind the line */
+.section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 15px;
+    background: rgba(255, 184, 0, 0.15); /* Subtle Gold Glow */
+    filter: blur(15px);
+    z-index: -1;
+}
+
+.section-divider {
+    width: 100%;
+    height: 80px; /* Adjust this to make the "hump" taller or flatter */
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -1px; /* Glues it to the section below */
+    z-index: 5;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* These dimensions create the 180-degree look */
+    width: 150%; 
+    height: 200%; 
+    
+    background: #000; /* The solid color of the next section */
+    
+    /* The 180-degree curve */
+    border-radius: 50% 50% 0 0; 
+    
+    /* The subtle line effect on the edge of the circle */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Optional: Add a glow to the edge of the circle */
+    box-shadow: 0px -10px 30px rgba(255, 255, 255, 0.05);
+}
+
+.section-divider {
+    width: 100%;
+    /* Reduced height makes the curve much thinner/flatter */
+    height: 10px; 
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -1px;
+    z-index: 5;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Making it wider (250%) makes the top edge look like a thin, gentle arc */
+    width: 250%; 
+    height: 500%; 
+    
+    background: #000;
+    
+    /* The core thin curve */
+    border-radius: 50% 50% 0 0; 
+    
+    /* A very thin, low-opacity line */
+    border-top: 1px solid rgba(170, 168, 16, 0.1);
+    
+    /* Slight shadow for depth without bulk */
+    box-shadow: 0px -5px 15px rgba(94, 92, 4, 0.5);
+}
+
+    /* Section Layout */
+    .challenge-section {
+        background-color: #000;
+        color: #fff;
+        padding: 60px 20px;
+        font-family: sans-serif;
+    }
+    
+    .configurator-card {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #0d0d0d;
+        border: 1px solid #1a1a1a;
+        border-radius: 24px;
+        padding: 30px;
+    }
+
+    /* Row & Pill Styling */
+    .config-row { margin-bottom: 25px; }
+    
+    label { 
+        display: block; 
+        margin-bottom: 15px; 
+        color: #888; 
+        font-size: 14px; 
+    }
+
+    .pill-group {
+        display: flex;
+        gap: 8px;
+        background: #141414;
+        padding: 6px;
+        border-radius: 12px;
+        flex-wrap: wrap; /* Allows the 13 sizes to wrap if they don't fit */
+    }
+
+    .pill {
+        padding: 10px 20px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    /* State Styles */
+    .pill.active { background: #fff !important; color: #000 !important; }
+    .pill.active-gold { background: #ffb800 !important; color: #000 !important; }
+
+    /* Details Box */
+    .config-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .details-box {
+        background: #141414;
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .detail-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+        border-bottom: 1px solid #1f1f1f;
+        padding-bottom: 5px;
+    }
+
+    /* Footer & Price */
+    .price-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #1a1a1a;
+    }
+
+    .display-price { font-size: 32px; font-weight: bold; margin: 0; }
+    
+    .promo-badge {
+        font-size: 10px;
+        color: #ffb800;
+        border: 1px dashed #ffb800;
+        padding: 4px 8px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    .btn-gold-large {
+        background: #ffb800;
+        color: #000;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Container & Typography */
+.challenge-section {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif; /* Using a cleaner sans-serif */
+}
+
+.configurator-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+/* Header Text Styling */
+.challenge-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.challenge-header p {
+    color: #888;
+    font-size: 14px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Pill Groups */
+.pill-group {
+    display: flex;
+    gap: 10px;
+    background: #141414;
+    padding: 8px;
+    border-radius: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.pill {
+    padding: 12px 24px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Selection Highlights */
+.pill.active { background: #fff !important; color: #000 !important; }
+.pill.active-gold { background: #ffb800 !important; color: #000 !important; }
+
+/* Grid Layout for Details */
+.config-split {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+.details-box {
+    background: #141414;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222;
+}
+
+.detail-item span { color: #888; }
+.detail-item strong { color: #fff; font-weight: 700; }
+
+/* Pricing Footer */
+.price-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.price-display span.label {
+    color: #888;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.display-price {
+    font-size: 48px; /* Bigger price like the screenshot */
+    font-weight: 800;
+    margin: 0;
+    color: #fff;
+}
+
+.btn-gold-large {
+    background: #ffb800;
+    color: #000;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 14px;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.btn-gold-large:active { transform: scale(0.98); }
+
+    :root {
+        --bg-dark: #0d0d0d;
+        --bg-inner: #141414;
+        --gold: #ffb800;
+        --border: #1a1a1a;
+        --text-gray: #888;
+    }
+
+    .configurator-card {
+        max-width: 1000px;
+        margin: 20px auto;
+        background: var(--bg-dark);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 40px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Account Sizes Grid */
+    .size-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 12px;
+        background: var(--bg-inner);
+        padding: 10px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+    }
+
+    /* Model Selection Row */
+    .model-row {
+        display: flex;
+        gap: 12px;
+        background: var(--bg-inner);
+        padding: 8px;
+        border-radius: 16px;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+
+    /* Unified Button Styling */
+    .pill {
+        padding: 14px 20px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        transition: 0.2s all ease;
+        text-align: center;
+    }
+
+    .pill.active { background: #fff !important; color: #000 !important; }
+    .pill.active-gold { background: var(--gold) !important; color: #000 !important; }
+
+    /* Layout Split */
+    .config-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    /* Detail Items */
+    .detail-list {
+        background: var(--bg-inner);
+        border-radius: 16px;
+        padding: 24px;
+    }
+
+    .detail-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #1f1f1f;
+        font-size: 14px;
+    }
+
+    .detail-item:last-child { border-bottom: none; }
+    .detail-item span { color: var(--text-gray); }
+    .detail-item strong { color: #fff; }
+
+    /* Footer */
+    .price-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border);
+    }
+
+    .display-price {
+        font-size: 42px;
+        font-weight: 800;
+        color: #fff;
+        margin: 0;
+    }
+
+    .promo-box {
+        font-size: 12px;
+        color: var(--gold);
+        border: 1px dashed var(--gold);
+        padding: 4px 10px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .btn-checkout {
+        background: var(--gold);
+        color: #000;
+        padding: 18px 45px;
+        border-radius: 14px;
+        font-weight: 800;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+
+    .button-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows them to go to a new line instead of squashing */
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.pill {
+    flex: 1 1 100px; /* Tells buttons: "Try to be 100px wide, but grow if there is space" */
+    min-width: 90px; 
+}
+
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatically switches to 1 column on mobile */
+    gap: 20px;
+}
