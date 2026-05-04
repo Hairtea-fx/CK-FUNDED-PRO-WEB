@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairtea Funded | Trade Like a Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-page"> <!-- This stays as your main body tag -->
+    
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+          <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">HAIRTEA <span>FUNDED</span></div>
+        <nav>
+            <a href="#">Trading</a>
+            <a href="#">Affiliate</a>
+            <a href="#">Company</a>
+            <a href="#">FAQ</a>
+        </nav>
+        <div class="auth-buttons">
+    <button class="login-btn">Log In</button>
+    <button class="get-funded-btn">Get Funded</button>
+    <button id="music-toggle" onclick="toggleMusic()">🔈 Play Music</button>
+</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="trust-badge">⭐ 4.8 Stars from 5k+ Verified Reviews</p>
+            <h1>TRADE LIKE <br><span>THE GREATEST</span></h1>
+            <p class="subtitle">Get Paid 100% on Demand <br> Up to $2M Simulated Capital</p>
+            <button class="cta-main">Get Funded <span>→</span></button>
+        </div>
+        
+        <div class="hero-image">
+            <!-- This is where your phone mockup or gold tea/trading graphic would go -->
+            <img src="https://via.placeholder.com/400x600" alt="Trading App View">
+        </div>
+    </section>
+
+    <section class="pricing">
+    <h2>CHOOSE YOUR ACCOUNT</h2>
+    <div class="pricing-grid">
+        <!-- $10k Account -->
+        <div class="price-card">
+            <h3>$10,000</h3>
+            <p>Hairtea Starter</p>
+            <hr>
+            <ul>
+                <li>Profit Target: $1,000</li>
+                <li>Max Daily Loss: $500</li>
+                <li>Max Total Loss: $1,000</li>
+                <li>Leverage: 1:100</li>
+            </ul>
+            <button class="buy-btn">Buy Challenge - $89</button>
+        </div>
+
+        <!-- $50k Account -->
+        <div class="price-card featured">
+            <div class="badge">MOST POPULAR</div>
+            <h3>$50,000</h3>
+            <p>Hairtea Pro</p>
+            <hr>
+            <ul>
+                <li>Profit Target: $5,000</li>
+                <li>Max Daily Loss: $2,500</li>
+                <li>Max Total Loss: $5,000</li>
+                <li>Leverage: 1:100</li>
+            </ul>
+            <button class="buy-btn">Buy Challenge - $299</button>
+        </div>
+
+        <!-- $100k Account -->
+        <div class="price-card">
+            <h3>$100,000</h3>
+            <p>Hairtea Elite</p>
+            <hr>
+            <ul>
+                <li>Profit Target: $10,000</li>
+                <li>Max Daily Loss: $5,000</li>
+                <li>Max Total Loss: $10,000</li>
+                <li>Leverage: 1:100</li>
+            </ul>
+            <button class="buy-btn">Buy Challenge - $499</button>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+    <section class="how-it-works">
+        <p class="section-tag">TRADING REVOLUTIONIZED. DON'T RISK YOUR OWN MONEY</p>
+        <h2>HOW IT WORKS</h2>
+        <p class="section-subtitle">Trade with our simulated Capital and get paid real Rewards</p>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-icon">🔓</div>
+                <h3>UNLOCK CAPITAL</h3>
+                <p>Get Funded with our Capital</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step-card">
+                <div class="step-icon">📈</div>
+                <h3>TRADE</h3>
+                <p>Trade with your favorite Trading Platform</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step-card">
+                <div class="step-icon">💰</div>
+                <h3>EARN</h3>
+                <p>Withdraw 100% of your profits</p>
+            </div>
+        </div>
+
+        <div class="step-actions">
+            <button class="cta-main">Get Funded <span>→</span></button>
+            <button class="btn-outline">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Features / Trust Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-item">
+                <h4>🚀 Instant Credentials</h4>
+                <p>Get your account details immediately after purchase.</p>
+            </div>
+            <div class="feature-item">
+                <h4>⚖️ Fair Rules</h4>
+                <p>No hidden consistency rules or tricky terms.</p>
+            </div>
+            <div class="feature-item">
+                <h4>💳 Fast Payouts</h4>
+                <p>Request your profits and get paid within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 HAIRTEA FUNDED. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="hero-image">
+    <div class="glow-effect"></div>
+    <img src="https://images.unsplash.com/photo-1611974717482-9825d460ee49?q=80&w=2070&auto=format&fit=crop" alt="Trading Dashboard">
+</div>
+
+<!-- Trust Bar: Platforms & Technology -->
+    <section class="trust-bar">
+        <p>POWERED BY INDUSTRY LEADERS</p>
+        <div class="logo-flex">
+            <span>MetaTrader 5</span>
+            <span>cTrader</span>
+            <span>TradingView</span>
+            <span>DXTrade</span>
+        </div>
+    </section>
+
+    <!-- Credibility/Features Section -->
+    <section class="credibility">
+        <div class="cred-header">
+            <p class="section-tag">WHY CHOOSE HAIRTEA FUNDED</p>
+            <h2>BUILT BY TRADERS, FOR TRADERS</h2>
+        </div>
+
+        <div class="cred-grid">
+            <div class="cred-item">
+                <div class="cred-icon">⚡</div>
+                <h4>Instant Setup</h4>
+                <p>No waiting for manual reviews. Get your account credentials delivered to your inbox the second your payment is confirmed.</p>
+            </div>
+
+            <div class="cred-item">
+                <div class="cred-icon">💎</div>
+                <h4>Zero Consistency Rules</h4>
+                <p>We don't punish you for having one big winning day. Trade your style, your way, without hidden "style" restrictions.</p>
+            </div>
+
+            <div class="cred-item">
+                <div class="cred-icon">🛡️</div>
+                <h4>Raw Spreads</h4>
+                <p>Experience institutional-grade liquidity with spreads starting from 0.0 pips and the lowest commissions in the prop space.</p>
+            </div>
+
+            <div class="cred-item">
+                <div class="cred-icon">🔄</div>
+                <h4>Bi-Weekly Payouts</h4>
+                <p>Don't wait a month for your money. Request your profit split every 14 days and receive it via Crypto or Deel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rule Transparency Table -->
+    <section class="transparency">
+        <div class="container">
+            <p class="section-tag">100% TRANSPARENCY</p>
+            <h2>NO HIDDEN TRAPS</h2>
+            <div class="table-wrapper">
+                <table class="rules-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Hairtea Funded</th>
+                            <th>Other firms</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Profit Split</td>
+                            <td class="highlight">Up to 90%</td>
+                            <td>Usually 80%</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Trading Days</td>
+                            <td class="highlight">3 Days</td>
+                            <td>5 - 10 Days</td>
+                        </tr>
+                        <tr>
+                            <td>News Trading</td>
+                            <td class="highlight">Allowed</td>
+                            <td>Often Restricted</td>
+                        </tr>
+                        <tr>
+                            <td>Weekend Holding</td>
+                            <td class="highlight">Allowed</td>
+                            <td>Mostly Forbidden</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section class="testimonials">
+        <div class="testimonial-grid">
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"The fastest payout I've ever received in 3 years of trading. No questions asked."</p>
+                <span class="user">- Marcus V. (Funded Trader)</span>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"Clean dashboard, raw spreads, and the support team actually knows about trading."</p>
+                <span class="user">- Sarah L. (Elite Account)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example for the $50k Card -->
+<button class="buy-btn" onclick="window.location.href='https://discord.gg/yourlink'">Buy Challenge</button>
+
+<footer>
+    <div class="footer-content">
+        <div class="logo">HAIRTEA <span>FUNDED</span></div>
+        <p>Trading involves significant risk. Hairtea Funded provides simulated accounts for educational purposes only.</p>
+        <div class="footer-links">
+            <a href="#">Trading Rules</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Affiliate Program</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Add this between the footer and the final closing body tag -->
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-toggle');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "🔊 Muting";
+            } else {
+                music.pause();
+                btn.innerHTML = "🔈 Play Music";
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

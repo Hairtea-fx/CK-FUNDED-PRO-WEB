@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairtea's portfollio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Background Hero Section */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1611974717482-58a00a74b62d?auto=format&fit=crop&q=80&w=2070'); /* Placeholder image of trading/tech */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #bef35e; /* Lime Green color from image */
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .nav-buttons .btn-signin {
+            background: #bef35e;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .nav-buttons .btn-signup {
+            border: 1px solid white;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Main Content */
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .content h1 {
+            font-size: 3.5rem;
+            max-width: 800px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Action Buttons */
+        .cta-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: #bef35e;
+            color: rgb(236, 206, 32);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn-secondary {
+            border: 1px solid white;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        /* Footer Icons Area */
+        .trust-badges {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background: rgb(245, 7, 7);
+            backdrop-filter: blur(5px);
+        }
+
+        .badge {
+            opacity: 0.7;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <nav>
+            <div class="logo">HAIRTEA</div>
+            <div class="nav-links">
+                <a href="#">Safe Mode™</a>
+                <a href="#">How it works</a>
+                <a href="#">FAQ</a>
+                <a href="#">About us</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="btn-signin">Sign In</a>
+                <a href="#" class="btn-signup">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h1>Hairtea is live with you</h1>
+            <p>I need your full attention - <strong>Now you can start for Free!</strong></p>
+            
+            <div class="cta-group">
+                <a href="#" class="btn-primary">Select Evaluation</a>
+                <a href="#" class="btn-secondary">Start For Free</a>
+            </div>
+        </div>
+
+        <div class="trust-badges">
+            <div class="badge">Skrill</div>
+            <div class="badge">PayPal</div>
+            <div class="badge">VISA</div>
+            <div class="badge">BITCOIN</div>
+            <div class="badge">PCI DSS</div>
+        </div>
+    </section>
+
+</body>
+</html>

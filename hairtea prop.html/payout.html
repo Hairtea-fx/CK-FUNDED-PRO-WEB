@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Center | Hairtea Funded</title>
+    <!-- DOUBLE CHECK THIS LINE: Ensure the filename matches your .css file exactly -->
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+            <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">HAIRTEA <span>FUNDED</span></div>
+        <nav class="side-nav">
+            <a href="dashboard.html">📊 Overview</a>
+            <a href="payout.html" class="active">💳 Payouts</a>
+            <a href="#">🏆 Leaderboard</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+        <div class="sidebar-footer">
+    <button id="music-toggle" onclick="toggleMusic()" style="margin-bottom: 10px; width: 90%; padding: 8px; cursor: pointer; background: rgba(212,175,55,0.1); border: 1px solid #d4af37; color: #d4af37; border-radius: 4px; font-size: 12px;">🔈 Play Music</button>
+    <p>Account: #88291</p>
+    <span>$50,000 Pro</span>
+</div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <header class="dash-header">
+            <div>
+                <h2>Withdrawal Center</h2>
+                <p style="color: #666;">Manage your profit splits and payment methods.</p>
+            </div>
+        </header>
+
+        <div class="payout-container">
+            <div class="payout-card featured">
+                <p style="color: #666; font-size: 0.8rem;">Available for Payout</p>
+                <h2 style="font-size: 3rem; margin: 10px 0;">$2,450.00</h2>
+                <p style="margin-bottom: 20px;">Next payout available in: <span style="color: #d4af37;">4 Days</span></p>
+                
+                <div class="payout-methods">
+                    <div class="method-option active">
+                        <input type="radio" name="payout" id="crypto" checked>
+                        <label for="crypto">🪙 Crypto (USDT/BTC)</label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" name="payout" id="deel">
+                        <label for="deel">💳 Deel / Bank Transfer</label>
+                    </div>
+                </div>
+                
+                <button class="cta-main" style="width: 100%; margin-top: 20px;">Request Withdrawal</button>
+            </div>
+
+            <div class="payout-info">
+                <h4>Payout Guidelines</h4>
+                <ul>
+                    <li>Minimum withdrawal: $100</li>
+                    <li>Processing time: 24-48 Hours</li>
+                    <li>Profit Split: 100% (First Payout)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            btn.innerHTML = "🔊 Muting";
+        } else {
+            music.pause();
+            btn.innerHTML = "🔈 Play Music";
+        }
+    }
+</script>
+
+</body>
+</html>

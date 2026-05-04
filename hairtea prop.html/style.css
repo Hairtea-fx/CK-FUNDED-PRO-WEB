@@ -1,0 +1,1602 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a; /* Deep Black */
+    color: #ffffff;
+}
+
+/* Navbar Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo span { color: #d4af37; /* Gold color */ }
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover { color: #fff; }
+
+.get-funded-btn {
+    background-color: #d4af37;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 90vh;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero-content h1 span {
+    color: #d4af37;
+}
+
+.cta-main {
+    background-color: #d4af37;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+}
+
+.pricing {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    width: 320px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+}
+
+.price-card.featured {
+    border: 2px solid #d4af37;
+    position: relative;
+}
+
+.badge {
+    background: #d4af37;
+    color: #000;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.price-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 30px 0;
+}
+
+.price-card li {
+    margin: 15px 0;
+    color: #bbb;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-card:hover .buy-btn {
+    background: #d4af37;
+    color: black;
+}
+
+.how-it-works {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.section-tag {
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.how-it-works h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.steps-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    width: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.step-arrow {
+    font-size: 2rem;
+    color: #d4af37;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Features Section --- */
+.features {
+    background: #0a0a0a;
+    padding: 60px 5%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 250px;
+}
+
+.feature-item h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 50px 5%;
+    background: #000;
+    text-align: center;
+}
+
+.footer-content p {
+    color: #444;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+header {
+    position: fixed; /* Fixes it to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above all other content */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Blurs the background behind the header */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+/* Because the header is now "floating," we need to push the hero section down */
+.hero {
+    margin-top: 80px; 
+}
+
+.hero-image {
+    position: relative;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2); /* Gold glow */
+    transform: perspective(1000px) rotateY(-15deg); /* Slight 3D tilt */
+}
+
+.glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Enhanced How It Works Styling */
+.how-it-works {
+    padding: 120px 5%;
+    text-align: center;
+    background: radial-gradient(circle at bottom, #111 0%, #000 100%);
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #888;
+    line-height: 1.6;
+}
+
+.step-card {
+    position: relative;
+    overflow: hidden; /* For the number background effect */
+}
+
+/* The faint large number in the background of each card */
+.step-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.step-card h3 {
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: #999;
+}
+
+/* Styling the buttons at the bottom */
+.step-actions {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ensuring the arrow disappears on mobile */
+@media (max-width: 900px) {
+    .step-arrow {
+        display: none;
+    }
+    .steps-grid {
+        flex-direction: column;
+    }
+}
+
+/* Trust Bar */
+.trust-bar {
+    padding: 40px 5%;
+    background: #050505;
+    text-align: center;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+.trust-bar p {
+    color: #444;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.logo-flex {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    opacity: 0.5;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #fff;
+    filter: grayscale(1);
+}
+
+/* Credibility Section */
+.credibility {
+    padding: 120px 5%;
+    background: #000;
+}
+
+.cred-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.cred-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.cred-item {
+    padding: 30px;
+    background: linear-gradient(145deg, #0a0a0a 0%, #000 100%);
+    border-left: 2px solid #222;
+    transition: 0.3s;
+}
+
+.cred-item:hover {
+    border-left-color: #d4af37;
+    background: #0a0a0a;
+}
+
+.cred-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cred-item h4 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.cred-item p {
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Transparency Table */
+.transparency {
+    padding: 100px 5%;
+    background: #000;
+    text-align: center;
+}
+
+.table-wrapper {
+    margin-top: 50px;
+    overflow-x: auto; /* For mobile phones */
+}
+
+.rules-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #0a0a0a;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.rules-table th, .rules-table td {
+    padding: 25px;
+    text-align: left;
+    border-bottom: 1px solid #111;
+}
+
+.rules-table th {
+    background: #111;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.rules-table td.highlight {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(to bottom, #000, #050505);
+}
+
+.test-card {
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    border: 1px solid #111;
+}
+
+.stars {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.test-card p {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.user {
+    color: #666;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+    /* Stack the Hero section vertically */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+        transform: none; /* Remove the 3D tilt on mobile for better visibility */
+    }
+
+    /* Stack the pricing cards */
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-card {
+        width: 90%; /* Make cards wider on mobile */
+    }
+
+    /* Hide the arrows in the 'How It Works' section */
+    .step-arrow {
+        display: none;
+    }
+
+    /* Adjust Navigation for mobile */
+    nav {
+        display: none; /* Usually, you'd add a 'Hamburger' menu here later */
+    }
+}
+
+/* Global Hover Animation for Cards */
+.price-card, .step-card, .cred-item {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.price-card:hover, .step-card:hover {
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+    border-color: #d4af37;
+    transform: translateY(-10px);
+}
+
+/* Dashboard Specific Layout */
+.dashboard-body {
+    display: flex;
+    background: #050505;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #000;
+    border-right: 1px solid #111;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav {
+    margin-top: 50px;
+    flex-grow: 1;
+}
+
+.side-nav a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    padding: 15px 0;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.side-nav a.active, .side-nav a:hover {
+    color: #d4af37;
+}
+
+.dashboard-main {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: #0a0a0a;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #111;
+}
+
+.gold-border {
+    border-color: #d4af37;
+}
+
+.stat-card p {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    font-size: 1.8rem;
+}
+
+.danger {
+    color: #ff4d4d;
+}
+
+.chart-container {
+    background: #0a0a0a;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #111;
+    height: 300px;
+}
+
+.placeholder-chart {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    border: 1px dashed #222;
+    margin-top: 20px;
+}
+
+.dashboard-main {
+    margin-top: 100px; /* Adjust this number until the 'Current Balance' is visible */
+    padding: 20px 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* This puts 4 items in a row */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* For smaller screens/smaller windows, make it 2 columns */
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the 'Account #' to the bottom */
+    height: 100vh;
+    position: sticky; /* Keeps it there when you scroll */
+    top: 0;
+}
+
+/* Trading History Table */
+.history-container {
+    background: #0a0a0a;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #111;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trades-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.trades-table th {
+    color: #444;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #111;
+}
+
+.trades-table td {
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: #eee;
+    border-bottom: 1px solid #111;
+}
+
+/* Status Colors */
+.buy { color: #00ff88; }
+.sell { color: #ff4d4d; }
+.profit { color: #00ff88; font-weight: bold; }
+
+.status-closed {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.status-open {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
+.btn-small {
+    background: transparent;
+    border: 1px solid #222;
+    color: #888;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Payout Section Styling */
+.payout-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.payout-card {
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #d4af37; /* Highlight with Hairtea Gold */
+}
+
+.payout-card h2 {
+    font-size: 3rem;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.payout-methods {
+    margin: 25px 0;
+}
+
+.method-option {
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #222;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.method-option.active {
+    border-color: #d4af37;
+}
+
+.payout-info {
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #111;
+}
+
+.payout-info ul {
+    margin-top: 20px;
+    list-style: none; /* Changed from list-content to list-style */
+    padding: 0;
+}
+
+.payout-info li {
+    color: #888;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.payout-info li::before {
+    content: "•";
+    color: #d4af37;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.dashboard-main {
+    flex-grow: 1;
+    margin-left: 260px; /* This ensures it doesn't hide behind the sidebar */
+    padding: 40px;
+}
+
+/* Specific Dashboard Layout Fix */
+.dashboard-main {
+    margin-top: 100px; /* Pushes content down so the header doesn't cover it */
+    margin-left: 260px; /* Gives space for the sidebar */
+    padding: 40px;
+    width: calc(100% - 260px); /* Ensures it doesn't overflow the screen */
+}
+
+/* Fix for the stats cards stacking weirdly */
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 200px; /* Prevents them from getting too skinny */
+    background: #0a0a0a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #111;
+}
+
+.dashboard-body header {
+    position: absolute; /* Changes it from 'fixed' so it stays at the top of the content */
+    background: transparent;
+    border-bottom: none;
+    width: auto;
+    left: 260px;
+}
+
+.trades-table th, .trades-table td {
+    padding: 15px 10px; /* Increased side padding */
+    text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping weirdly */
+}
+
+/* Give columns room to breathe */
+.trades-table th:nth-child(1), .trades-table td:nth-child(1) { width: 15%; } /* Asset */
+.trades-table th:nth-child(6), .trades-table td:nth-child(6) { width: 20%; } /* Profit */
+
+.payout-info {
+    flex: 1;
+    min-width: 280px;
+    background: #0a0a0a;
+    padding: 25px;
+    border: 1px solid #111;
+}
+
+.payout-info h4 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.payout-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.payout-info li {
+    font-size: 0.85rem; /* Slightly smaller for professional look */
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #aaa;
+    display: flex;
+    align-items: flex-start;
+}
+
+.payout-info li::before {
+    content: "•";
+    color: #d4af37;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.dash-header {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.placeholder-chart {
+    position: relative;
+    background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 1px, transparent 40px);
+    border: 1px solid #111;
+}
+
+.fake-graph .line {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37);
+    transform: rotate(-5deg);
+}
+
+/* Fix for Table Text Overlap */
+.trades-table {
+    width: 100%;
+    border-collapse: separate; /* Allows for better spacing control */
+    border-spacing: 0 10px; /* Adds vertical space between rows */
+}
+
+.trades-table th {
+    color: #555;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.trades-table td {
+    background: #0d0d0d; /* Slightly lighter than the background for contrast */
+    padding: 15px 10px;
+    font-size: 0.85rem;
+}
+
+/* Ensure specific columns don't touch */
+.trades-table td:nth-child(1) { border-radius: 8px 0 0 8px; font-weight: bold; } /* Asset */
+.trades-table td:nth-child(7) { border-radius: 0 8px 8px 0; } /* Status */
+
+.trades-table .profit {
+    color: #00ff88;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Fix the Dashboard Header Alignment */
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #111;
+}
+
+.dash-header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* Ensure the 'Request Payout' button doesn't float weirdly */
+.dash-header .cta-main {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    margin: 0;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Push the entire content area down so it clears the landing page header */
+.dashboard-main {
+    padding-top: 140px; /* Increased padding */
+}
+
+/* Payouts Page Specifics */
+.payout-card.featured {
+    max-width: 500px; /* Makes it look better as a standalone card */
+    margin: 0 auto;  /* Centers it if the grid is 1 column */
+    border: 1px solid #d4af37;
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1);
+}
+
+.payout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* Center the Payout Section */
+.payout-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.payout-card.featured {
+    flex: 2;
+    background: #0a0a0a;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #d4af37;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
+}
+
+.payout-info {
+    flex: 1;
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #111;
+}
+
+.dashboard-main {
+    flex: 1;
+    /* Change this from 260px to a smaller number if the sidebar is hidden, 
+       or keep it if we bring the sidebar back. Let's try 40px for a clean look. */
+    margin-left: 40px; 
+    padding: 100px 40px 40px 0; /* Reduced the left padding */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.history-container {
+    width: 100%;
+    max-width: 1200px; /* Limits how wide it gets on huge screens */
+    margin-left: 0;   /* Force it to the left */
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #111;
+}
+
+.video-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts it behind your text */
+    overflow: hidden;
+}
+
+.dancing-guy {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the video fill the screen */
+    opacity: 0.4; /* Lower this if the text is hard to read */
+    filter: grayscale(50%) brightness(70%); /* Makes it blend with the dark theme */
+}
+
+/* Optional: Add a glow behind him to keep the Gold theme */
+.video-bg-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.video-bg-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%; /* Takes up only the right half */
+    height: 80%;
+    z-index: 1;
+}
+
+.hero {
+    position: relative; /* This is the most important line */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #000; /* Fallback color */
+}
+
+.video-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Keeps it behind text */
+}
+
+.dancing-guy {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes it fill the whole background */
+    opacity: 0.5; /* Makes it subtle so you can read the text */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Pushes text in front of video */
+    padding-left: 10%;
+}
+
+.main-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.dancing-character {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* This keeps the 3D guy from being too bright */
+}
+
+/* Full Page 3D Animation Background */
+.main-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* This is crucial to keep it behind your text */
+    overflow: hidden;
+    background: #000; /* Fallback color */
+}
+
+.dancing-character {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the character fills the screen */
+    opacity: 0.5; /* Makes it subtle so you can still read your content */
+    filter: brightness(70%); /* Optional: keeps the focus on your buttons */
+}
+
+/* This removes the solid black background from the top section */
+body, 
+.landing-page, 
+.hero {
+    background-color: transparent !important;
+}
+
+/* This adds a cool "Glass" effect to your top menu so it looks professional */
+header {
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* This ensures the video fills the entire screen behind your text */
+.main-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Removes black background from the 'How It Works' section */
+.how-it-works, 
+section {
+    background-color: transparent !important;
+}
+
+/* Optional: Make the cards slightly transparent for a high-end look */
+.how-it-works .card, 
+.step-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Removes the solid black background from the 'How It Works' section */
+.how-it-works, 
+section {
+    background-color: transparent !important;
+}
+
+/* Optional: Make the cards look high-end by adding a slight blur */
+.how-it-works .card, 
+.step-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Targets the "How It Works" area specifically */
+.how-it-works, 
+section {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Optional: Gives the three cards a cool "floating glass" look */
+.how-it-works .card,
+.step-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dashboard Specific Transparency */
+.dashboard-body,
+.sidebar,
+.dashboard-main,
+.stats-grid {
+    background: transparent !important;
+}
+
+/* Glass effect for the Sidebar and Stat Cards */
+.sidebar, .stat-card {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure the video stays fixed behind the scrolling dashboard */
+.main-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Removes solid backgrounds from the main dashboard area and tables */
+.dashboard-main,
+.recent-trades,
+.trading-history,
+table {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Adds a sleek glass effect to the table container so the text is readable */
+.recent-trades {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Ensure table rows don't have hidden background colors */
+tr, td, th {
+    background: transparent !important;
+}
+
+/* Targets the large main container and the specific card for trades */
+.dashboard-main, 
+.recent-trades, 
+.trades-container {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* This adds the "Glass" effect to the trades box so it looks modern */
+.recent-trades {
+    background: rgba(255, 255, 255, 0.03) !important; /* Very slight white tint */
+    backdrop-filter: blur(15px); /* This makes the video look frosted behind the table */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* Ensure the table itself doesn't have a hidden black background */
+table, thead, tbody, tr, td {
+    background: transparent !important;
+}
+
+/* Targets the main containers for your trade tables */
+.recent-trades,
+.trading-history,
+.trades-container,
+.dashboard-card {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border to define the area */
+    border-radius: 12px;
+}
+
+/* Adds a sleek "Glass" effect so the table numbers remain readable */
+.recent-trades, .trading-history {
+    background: rgba(255, 255, 255, 0.02) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+/* Ensure the table itself doesn't have a hidden background color */
+table, 
+thead, 
+tbody, 
+tr, 
+td {
+    background: transparent !important;
+}
+
+/* Optional: Make the "View All" buttons blend in better */
+.view-all-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Payout Page Specific Transparency */
+.payout-container,
+.payout-card,
+.guidelines-card,
+.payout-body {
+    background: transparent !important;
+}
+
+/* Glass effect for the Payout boxes */
+.payout-card, .guidelines-card {
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* Make sure the main content area doesn't have a white background */
+.main-content {
+    background: transparent !important;
+}
+
+/* Specific Leaderboard Glass Effect */
+.leaderboard-table-wrapper {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.leaderboard-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.leaderboard-table-wrapper th, 
+.leaderboard-table-wrapper td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-trader {
+    background: rgba(212, 175, 55, 0.15) !important;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* Settings Page Transparency */
+.settings-container {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.settings-card {
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    color: white;
+}
+
+.settings-card h3 {
+    margin-bottom: 20px;
+    color: #d4af37; /* Gold accent for headers */
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #888;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+}
+
+.save-btn {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Funding Page Layout */
+.funding-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.chip-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chip.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+.platform-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.platform-box {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.platform-box.active {
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.summary-list {
+    list-style: none;
+    padding: 0;
+}
+
+.summary-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Login Page Specifics */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.login-wrapper {
+    z-index: 10;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Captcha Box Styling */
+.captcha-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.captcha-box input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #888;
+}
+
+.login-footer a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+/* Styling for the Country Dropdown */
+select option {
+    background-color: #1a1a1a; /* Dark background for the dropdown list */
+    color: white;
+}
+
+/* Ensure the wrapper doesn't get cut off on small screens */
+.login-wrapper {
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+}
+.login-wrapper::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Chrome/Safari */
+}

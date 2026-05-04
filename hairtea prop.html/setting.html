@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Hairtea Funded</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+            <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <aside class="sidebar">
+        <div class="logo">HAIRTEA <span>FUNDED</span></div>
+        <nav class="side-nav">
+            <a href="dashboard.html">📊 Overview</a>
+            <a href="payout.html">💳 Payouts</a>
+            <a href="leaderboard.html">🏆 Leaderboard</a>
+            <a href="settings.html" class="active">⚙️ Settings</a>
+        </nav>
+        
+        <div class="user-profile">
+            <p>Account: #88291</p>
+            <span>$50,000 Pro</span>
+            <button id="music-toggle" onclick="toggleMusic()">🔈 Play Music</button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dash-header">
+            <h2>Account Settings</h2>
+        </header>
+
+        <section class="settings-container">
+            <div class="settings-card">
+                <h3>Profile Information</h3>
+                <div class="input-group">
+                    <label>Display Name</label>
+                    <input type="text" placeholder="Trader Name" value="Hairtea Trader">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="email@example.com">
+                </div>
+                <button class="save-btn">Update Profile</button>
+            </div>
+
+            <div class="settings-card">
+                <h3>Security</h3>
+                <button class="cta-secondary">Change Password</button>
+                <button class="cta-secondary">Enable 2FA</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-toggle');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "🔊 Muting";
+            } else {
+                music.pause();
+                btn.innerHTML = "🔈 Play Music";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairtea Dashboard | Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+            <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">HAIRTEA <span>FUNDED</span></div>
+        <nav class="side-nav">
+            <a href="#" class="active">📊 Overview</a>
+            <a href="#">💳 Payouts</a>
+            <a href="#">🏆 Leaderboard</a>
+            <a href="kyc.html">🆔 KYC Verification</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+        <div class="user-profile">
+            <p>Account: #88291</p>
+            <span>$50,000 Pro</span>
+            <button id="music-toggle" onclick="toggleMusic()" style="margin-top: 10px; width: 100%; padding: 8px; cursor: pointer; background: rgba(212,175,55,0.1); border: 1px solid #d4af37; color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: bold;">🔈 Play Music</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <header class="dash-header">
+            <h2>Account Overview</h2>
+            <button class="cta-main">Request Payout</button>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card gold-border">
+                <p>Current Balance</p>
+                <h3>$52,450.00</h3>
+                <span class="trend up">+4.9%</span>
+            </div>
+            <div class="stat-card">
+                <p>Equity</p>
+                <h3>$52,100.00</h3>
+            </div>
+            <div class="stat-card">
+                <p>Max Daily Loss</p>
+                <h3 class="danger">$2,500.00</h3>
+            </div>
+            <div class="stat-card">
+                <p>Days Remaining</p>
+                <h3>Unlimited</h3>
+            </div>
+        </div>
+
+        <!-- Chart Placeholder -->
+        <div class="chart-container">
+            <h3>Equity Curve</h3>
+            <div class="placeholder-chart">
+                <!-- We will add real charts here later using JavaScript -->
+                
+            </div>
+        </div>
+    </main>
+
+    <div class="stat-card gold-border">
+    <p>Current Balance</p>
+    <h3>$52,450.00</h3>
+    <span class="trend up">+4.9%</span>
+</div>
+
+<!-- Recent Trades Table -->
+<div class="history-container">
+    <div class="history-header">
+        <h3>Recent Trades</h3>
+        <button class="btn-small">View All</button>
+    </div>
+    <div class="table-scroll">
+        <table class="trades-table">
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Type</th>
+                    <th>Lots</th>
+                    <th>Entry</th>
+                    <th>Exit</th>
+                    <th>Profit/Loss</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EURUSD</td>
+                    <td class="buy">Buy</td>
+                    <td>2.00</td>
+                    <td>1.08450</td>
+                    <td>1.08950</td>
+                    <td class="profit">+$1,000.00</td>
+                    <td><span class="status-closed">Closed</span></td>
+                </tr>
+                <tr>
+                    <td>XAUUSD</td>
+                    <td class="sell">Sell</td>
+                    <td>1.50</td>
+                    <td>2035.20</td>
+                    <td>2030.10</td>
+                    <td class="profit">+$765.40</td>
+                    <td><span class="status-closed">Closed</span></td>
+                </tr>
+                <tr>
+                    <td>GBPUSD</td>
+                    <td class="buy">Buy</td>
+                    <td>1.00</td>
+                    <td>1.26500</td>
+                    <td>--</td>
+                    <td>-$120.00</td>
+                    <td><span class="status-open">Open</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<body class="dashboard-body">
+    <aside class="sidebar"> ... </aside>
+    
+    <main class="dashboard-main">
+        <header class="dash-header">
+            <h2>Account Overview</h2>
+            <button class="cta-main">Request Payout</button>
+        </header>
+        
+        <div class="stats-grid"> ... </div>
+    
+        <!-- Rest of your content -->
+    </main>
+</body>
+
+<div class="fake-graph">
+    <div class="line"></div>
+    <div class="dot" style="left: 20%; bottom: 40%;"></div>
+    <div class="dot" style="left: 50%; bottom: 60%;"></div>
+    <div class="dot" style="left: 80%; bottom: 85%;"></div>
+</div>
+
+<div class="history-container">
+    <div class="history-header">
+        <h3>Recent Trades</h3>
+        <button class="btn-small">View All</button>
+    </div>
+    <div class="table-scroll">
+        <table class="trades-table">
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Type</th>
+                    <th>Lots</th>
+                    <th>Entry</th>
+                    <th>Exit</th>
+                    <th style="text-align: right;">Profit/Loss</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows go here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<body class="dashboard-body" style="display: flex;">
+    <aside class="sidebar">
+        <!-- Sidebar content -->
+    </aside>
+    
+    <main class="dashboard-main">
+        <!-- Recent Trades, etc. -->
+    </main>
+</body>
+
+<script>
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            btn.innerHTML = "🔊 Muting";
+        } else {
+            music.pause();
+            btn.innerHTML = "🔈 Play Music";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Hairtea Funded</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+            <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="logo" style="text-align: center; margin-bottom: 30px;">HAIRTEA <span>FUNDED</span></div>
+            
+            <h2 style="text-align: center; margin-bottom: 20px; letter-spacing: 1px;">WELCOME BACK</h2>
+
+            <form action="dashboard.html">
+                <div class="input-group">
+                    <label>Registered Email Address</label>
+                    <input type="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <!-- Verify Human Section -->
+                <div class="captcha-container">
+                    <div class="captcha-box">
+                        <input type="checkbox" id="human-check" required>
+                        <label for="human-check">I am not a robot</label>
+                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/RecaptchaLogo.svg" alt="reCAPTCHA" width="30">
+                </div>
+
+                <button type="submit" class="save-btn" style="width: 100%; margin-top: 20px;">LOGIN</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#">Register Now</a></p>
+                <button id="music-toggle" onclick="toggleMusic()" style="background:none; border:none; color:#d4af37; cursor:pointer; margin-top:15px;">🔈 Play Music</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-toggle');
+        function toggleMusic() {
+            if (music.paused) { music.play(); btn.innerHTML = "🔊 Muting"; } 
+            else { music.pause(); btn.innerHTML = "🔈 Play Music"; }
+        }
+    </script>
+</body>
+</html>

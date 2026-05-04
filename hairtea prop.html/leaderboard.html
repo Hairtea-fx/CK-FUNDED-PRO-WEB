@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard | Hairtea Funded</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+            <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <aside class="sidebar">
+        <div class="logo">HAIRTEA <span>FUNDED</span></div>
+        <nav class="side-nav">
+            <a href="dashboard.html">📊 Overview</a>
+            <a href="payout.html">💳 Payouts</a>
+            <a href="leaderboard.html" class="active">🏆 Leaderboard</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+        
+        <div class="user-profile">
+            <p>Account: #88291</p>
+            <span>$50,000 Pro</span>
+            <button id="music-toggle" onclick="toggleMusic()">🔈 Play Music</button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dash-header">
+            <h2>Global Rankings</h2>
+        </header>
+
+        <section class="leaderboard-container">
+            <div class="leaderboard-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Trader</th>
+                            <th>Profit</th>
+                            <th>Gain</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-trader">
+                            <td>1</td>
+                            <td>Alex M.</td>
+                            <td>+$12,450.00</td>
+                            <td>+24.9%</td>
+                        </tr>
+                        <!-- More rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-toggle');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "🔊 Muting";
+            } else {
+                music.pause();
+                btn.innerHTML = "🔈 Play Music";
+            }
+        }
+    </script>
+</body>
+</html>

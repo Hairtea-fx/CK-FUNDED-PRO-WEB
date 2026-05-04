@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Funded | Hairtea Funded</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- 3D Animation Background -->
+    <div class="main-video-bg">
+        <video autoplay loop muted playsinline class="dancing-character">
+            <source src="dancing-guy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <aside class="sidebar">
+        
+        <div class="user-profile">
+            <p>Account: #88291</p>
+            <span>$50,000 Pro</span>
+            <button id="music-toggle" onclick="toggleMusic()">🔈 Play Music</button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dash-header">
+            <h2 style="letter-spacing: 2px;">CHOOSE YOUR ACCOUNT</h2>
+        </header>
+
+        <div class="funding-grid">
+            <!-- Left Side: Selection Options -->
+            <div class="selection-column">
+                <div class="settings-card">
+                    <h4>Model</h4>
+                    <div class="chip-group">
+                        <button class="chip">1 Step</button>
+                        <button class="chip active">Instant</button>
+                        <button class="chip">Goat Blitz</button>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h4>Platforms</h4>
+                    <div class="platform-group">
+                        <div class="platform-box active">MetaTrader 5</div>
+                        <div class="platform-box">cTrader</div>
+                        <div class="platform-box">TradLocker</div>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h4>Account Size</h4>
+                    <div class="chip-group">
+                        <button class="chip">50K</button>
+                        <button class="chip active">100K</button>
+                        <button class="chip">200K</button>
+                        <button class="chip">400K</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Summary Panel -->
+            <div class="summary-column">
+                <div class="settings-card summary-card">
+                    <ul class="summary-list">
+                        <li><span>Profit Target</span> <span>None</span></li>
+                        <li><span>Daily Loss</span> <span>3%</span></li>
+                        <li><span>Max Loss</span> <span>6%</span></li>
+                        <li><span>Leverage</span> <span>1:100</span></li>
+                    </ul>
+                    <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 20px 0;">
+                    <div class="price-action">
+                        <div class="price-text">
+                            <h3>$503</h3>
+                            <small>One-time Fee</small>
+                        </div>
+                        <button class="save-btn" style="width: auto; padding: 15px 30px;">GET FUNDED →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-toggle');
+        function toggleMusic() {
+            if (music.paused) { music.play(); btn.innerHTML = "🔊 Muting"; } 
+            else { music.pause(); btn.innerHTML = "🔈 Play Music"; }
+        }
+    </script>
+    
+</body>
+</html>
