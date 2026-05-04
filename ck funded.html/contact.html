@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CK Funded Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-black text-white font-sans overflow-x-hidden">
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="your-background-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <nav class="relative z-10 flex justify-between items-center px-10 py-6">
+        <div class="text-2xl font-bold tracking-tighter text-blue-500">CK FUNDED <span class="text-white">PRO</span></div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="./index.html" class="hover:text-blue-400 transition">Home</a>
+            <a href="./challenge.html" class="hover:text-blue-400 transition">Challenges</a>
+            <a href="./faq.html" class="hover:text-blue-400 transition">FAQ</a>
+            <a href="./blog.html" class="hover:text-blue-400 transition">Blog</a>
+            <a href="./contact.html" class="text-blue-500">Contact</a>
+        </div>
+        <button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-sm font-bold transition">LOGIN</button>
+    </nav>
+
+    <section class="relative z-10 min-h-screen flex items-center justify-center px-6 py-20">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            
+            <div class="space-y-8">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight">Get in <span class="text-blue-500">Touch.</span></h1>
+                <p class="text-gray-300 text-lg">Have questions about our scaling plans or payout process? Our elite support team is here to help you scale your trading career.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-500">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 uppercase">Email Us</p>
+                            <p class="text-xl font-semibold">support@ckfundedpro.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-500">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 uppercase">Support Hours</p>
+                            <p class="text-xl font-semibold">24/7 Priority Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                <form action="#" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                            <input type="email" placeholder="john@example.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                        <select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition text-gray-400">
+                            <option>Technical Support</option>
+                            <option>Account Inquiry</option>
+                            <option>Payout Request</option>
+                            <option>Partnership</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea rows="5" placeholder="How can we help you?" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-blue-600/20">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
