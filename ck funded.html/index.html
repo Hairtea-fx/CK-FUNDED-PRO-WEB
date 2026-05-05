@@ -1061,11 +1061,13 @@ s0.parentNode.insertBefore(s1,s0);
 
     /* Chat Window */
     .chat-window {
-        position: absolute;
-        bottom: 80px;
-        right: 0;
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
         width: 350px;
+        max-width: calc(100vw - 40px);
         height: 450px;
+        max-height: calc(100vh - 140px);
         background: #121212; /* Dark Theme */
         border-radius: 15px;
         border: 1px solid rgba(255,255,255,0.1);
@@ -1073,6 +1075,7 @@ s0.parentNode.insertBefore(s1,s0);
         flex-direction: column;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 10000;
     }
 
     .chat-header {
@@ -1139,6 +1142,76 @@ s0.parentNode.insertBefore(s1,s0);
     }
 
     .send-btn:hover { transform: translateX(3px); }
+
+    @media (max-width: 768px) {
+        .chat-wrapper {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .chat-launcher {
+            width: 52px;
+            height: 52px;
+            font-size: 22px;
+        }
+
+        .chat-window {
+            width: min(90vw, 320px);
+            height: min(80vh, 380px);
+            right: 10px;
+            bottom: 80px;
+        }
+
+        .chat-header {
+            padding: 12px;
+        }
+
+        .chat-footer {
+            padding: 10px;
+        }
+
+        .chat-footer input {
+            padding: 8px 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .chat-wrapper {
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .chat-launcher {
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
+        }
+
+        .chat-window {
+            width: min(92vw, 280px);
+            height: min(78vh, 320px);
+            right: 10px;
+            bottom: 70px;
+        }
+
+        .chat-header {
+            padding: 10px;
+        }
+
+        .chat-header h3 {
+            font-size: 0.85rem;
+        }
+
+        .chat-footer {
+            padding: 8px;
+            gap: 8px;
+        }
+
+        .chat-footer input {
+            padding: 7px 10px;
+            font-size: 0.9rem;
+        }
+    }
 </style>
 
 <script>
