@@ -1646,7 +1646,8 @@ label {
     .trustpilot-bar {
         flex-direction: column;
         gap: 0.75rem;
-        margin: 1rem 0;
+        margin: 1rem 0 5rem 0;
+        padding-right: 80px;
     }
 
     .tp-text, .tp-brand {
@@ -1657,6 +1658,51 @@ label {
         width: 22px;
         height: 22px;
         font-size: 14px;
+    }
+
+    /* Chat window mobile adjustments */
+    .chat-wrapper {
+        position: fixed;
+        bottom: 20px;
+        right: 15px;
+        z-index: 9999;
+    }
+
+    .chat-launcher {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .chat-window {
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        width: 280px !important;
+        height: 350px !important;
+        font-size: 14px;
+    }
+
+    .chat-header {
+        padding: 12px;
+    }
+
+    .chat-header h3 {
+        font-size: 0.85rem;
+    }
+
+    .chat-body {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .chat-footer {
+        padding: 10px;
+    }
+
+    .chat-input {
+        font-size: 13px;
+        padding: 8px;
     }
 
     /* Configurator section */
@@ -1896,7 +1942,8 @@ label {
 
     .trustpilot-bar {
         gap: 0.5rem;
-        margin: 0.75rem 0;
+        margin: 0.75rem 0 5rem 0;
+        padding-right: 70px;
     }
 
     .tp-text, .tp-brand {
@@ -1916,5 +1963,50 @@ label {
     .hero-container {
         gap: 1rem;
         padding: 0 0.75rem;
+    }
+
+    /* Chat window mobile adjustments for 480px */
+    .chat-wrapper {
+        position: fixed;
+        bottom: 15px;
+        right: 10px;
+        z-index: 9999;
+    }
+
+    .chat-launcher {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .chat-window {
+        position: absolute;
+        bottom: 65px;
+        right: 0;
+        width: 250px !important;
+        height: 300px !important;
+        font-size: 12px;
+    }
+
+    .chat-header {
+        padding: 10px;
+    }
+
+    .chat-header h3 {
+        font-size: 0.8rem;
+    }
+
+    .chat-body {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .chat-footer {
+        padding: 8px;
+    }
+
+    .chat-input {
+        font-size: 12px;
+        padding: 6px;
     }
 }
