@@ -7,12 +7,18 @@
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-black);
     color: white;
     font-family: 'Inter', sans-serif;
     margin: 0;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* 2. 3D Video Background & Overlay */
@@ -1394,6 +1400,15 @@ label {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     body {
         font-size: 14px;
     }
@@ -1404,37 +1419,43 @@ label {
         top: 0;
         left: 0;
         right: 0;
-        width: 100%;
+        width: 100vw;
+        max-width: 100%;
         height: auto;
-        padding: 0.75rem 3%;
+        padding: 0.6rem 2%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 0.5rem;
-        background: rgba(0, 0, 0, 0.95);
+        gap: 0.4rem;
+        background: rgba(0, 0, 0, 0.98);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 1000;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        max-height: 60vh;
     }
 
     .brand-container.stacked-logo {
         flex-direction: row;
-        gap: 8px;
+        gap: 6px;
         margin-bottom: 0;
-        width: 100%;
+        width: auto;
         justify-content: center;
+        flex-shrink: 0;
     }
 
     .brand-logo {
-        height: 28px;
+        height: 26px;
         width: auto;
+        flex-shrink: 0;
     }
 
     .logo-text {
-        font-size: 0.75rem;
-        letter-spacing: 1px;
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
     }
 
     /* Nav menu wraps properly */
@@ -1442,12 +1463,14 @@ label {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 0.3rem;
+        gap: 0.25rem;
         justify-content: center;
         align-items: center;
-        margin: 0.5rem 0;
+        margin: 0.3rem auto;
         width: 100%;
         list-style: none;
+        padding: 0;
+        max-width: 100vw;
     }
 
     .nav-menu li {
@@ -1457,13 +1480,15 @@ label {
 
     .nav-menu li a {
         display: block;
-        padding: 0.4rem 0.6rem;
-        font-size: 0.7rem;
+        padding: 0.3rem 0.4rem;
+        font-size: 0.65rem;
         font-weight: 500;
         text-decoration: none;
         color: white;
         transition: color 0.3s;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .nav-menu li a:hover {
@@ -1474,56 +1499,63 @@ label {
     .nav-actions {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
         width: 100%;
         justify-content: center;
-        margin-top: 0.5rem;
+        margin-top: 0.4rem;
+        flex-shrink: 0;
     }
 
     .btn-login {
         text-decoration: none;
         color: white;
         font-weight: 600;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
     }
 
     .btn-cta {
         text-decoration: none;
         background: #FFB800;
         color: black;
-        padding: 8px 12px;
-        border-radius: 6px;
+        padding: 6px 10px;
+        border-radius: 5px;
         font-weight: 700;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         border: none;
         cursor: pointer;
         transition: transform 0.2s;
+        white-space: nowrap;
     }
 
     .btn-cta:hover {
-        transform: translateY(-2px);
+        transform: translateY(-1px);
     }
 
     /* Hero section */
     .hero {
-        padding-top: 250px;
-        padding-bottom: 3rem;
+        padding-top: 200px;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         height: auto;
         min-height: 100vh;
+        margin-top: 0;
     }
 
     .hero-title {
-        font-size: clamp(1.8rem, 12vw, 3.5rem);
-        margin: 1rem 0;
+        font-size: clamp(1.5rem, 11vw, 3rem);
+        margin: 0.75rem 0;
         line-height: 1.1;
+        word-wrap: break-word;
     }
 
     .hero-subtitle {
         max-width: 100%;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         color: #a0a0a0;
-        margin-bottom: 2rem;
-        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0;
     }
 
     .badge {
@@ -1692,62 +1724,85 @@ label {
 }
 
 @media (max-width: 480px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .navbar-top {
         padding: 0.5rem 2%;
-        gap: 0.35rem;
+        gap: 0.3rem;
+        max-height: 55vh;
+        overflow-y: auto;
     }
 
     .brand-container.stacked-logo {
-        gap: 6px;
+        gap: 5px;
+        width: auto;
+        flex-shrink: 0;
     }
 
     .brand-logo {
-        height: 24px;
+        height: 23px;
+        flex-shrink: 0;
     }
 
     .logo-text {
-        font-size: 0.65rem;
+        font-size: 0.62rem;
         letter-spacing: 0px;
+        white-space: nowrap;
     }
 
     .nav-menu {
-        gap: 0.2rem;
+        gap: 0.15rem;
+        width: 100%;
+        max-width: 100vw;
+        padding: 0;
     }
 
     .nav-menu li a {
-        padding: 0.3rem 0.4rem;
-        font-size: 0.65rem;
+        padding: 0.25rem 0.35rem;
+        font-size: 0.62rem;
     }
 
     .nav-actions {
-        gap: 0.35rem;
-        margin-top: 0.4rem;
+        gap: 0.3rem;
+        margin-top: 0.3rem;
+        flex-shrink: 0;
     }
 
     .btn-login {
-        font-size: 0.65rem;
+        font-size: 0.62rem;
+        padding: 0.2rem 0.4rem;
     }
 
     .btn-cta {
-        padding: 6px 10px;
-        font-size: 0.65rem;
+        padding: 5px 8px;
+        font-size: 0.62rem;
     }
 
     /* Hero section for small screens */
     .hero {
-        padding-top: 220px;
-        padding-bottom: 2rem;
+        padding-top: 180px;
+        padding-bottom: 1.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-top: 0;
     }
 
     .hero-title {
-        font-size: clamp(1.5rem, 10vw, 2.8rem);
-        margin: 0.75rem 0;
+        font-size: clamp(1.3rem, 10vw, 2.5rem);
+        margin: 0.5rem 0;
     }
 
     .hero-subtitle {
-        font-size: 0.85rem;
-        margin-bottom: 1.5rem;
-        padding: 0 0.75rem;
+        font-size: 0.82rem;
+        margin-bottom: 1.2rem;
+        padding: 0;
     }
 
     .badge {
