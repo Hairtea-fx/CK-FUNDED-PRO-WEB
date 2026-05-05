@@ -43,94 +43,283 @@
     </div>
 </nav>
 
-    <section class="py-20 faq-gradient">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-6 uppercase">How can we <span class="text-[#ffb800]">help?</span></h1>
-            <div class="relative mt-10">
-                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
-                <input type="text" placeholder="Search for rules, payouts, or platforms..." class="w-full bg-white/5 border border-white/10 p-5 pl-14 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#ffb800] transition-all">
-            </div>
+    <!-- Pipstone Help Center Section -->
+<section class="help-center">
+    <div class="help-wrapper">
+        <!-- Main Header -->
+        <h1 class="guide-title">The Ultimate Guide to Everything at Pipstone Capital</h1>
+
+       <div class="search-container">
+    <span class="search-icon">🔍</span>
+    <!-- Added id="articleSearch" and an onkeyup event -->
+    <input type="text" id="articleSearch" placeholder="Search for articles..." onkeyup="filterArticles()">
+</div
+
+        <!-- Most Viewed Articles Box -->
+<div class="most-viewed-box">
+    <h2>Most Viewed Articles</h2>
+    <div class="articles-grid">
+        <!-- Replace 'one-step-guide.html' with your actual file name -->
+        <a href="one-step-guide.html" class="article-link">
+            What is the 1-Step Challenge and How Does It Work? 
+            <span class="chevron">›</span>
+        </a>
+
+        <a href="two-step-guide.html" class="article-link">
+            What is the 2-Step Challenge and how does it work? 
+            <span class="chevron">›</span>
+        </a>
+
+        <a href="about-pipstone.html" class="article-link">
+            What is Pipstone Capital and How does it works? 
+            <span class="chevron">›</span>
+        </a>
+
+        <a href="getting-started.html" class="article-link">
+            How to Get Started with a Funded Challenge 
+            <span class="chevron">›</span>
+        </a>
+
+        <a href="signup-process.html" class="article-link">
+            How to Sign Up for Pipstone Capital 
+            <span class="chevron">›</span>
+        </a>
+
+        <a href="scaling-plans.html" class="article-link">
+            Does Pipstone Offer Scaling Plans? 
+            <span class="chevron">›</span>
+        </a>
+    </div>
+</div>
+
+       <!-- Category Cards Grid -->
+<div class="category-grid">
+    <!-- General FAQ -->
+    <a href="general-faq.html" class="cat-card">
+        <div class="cat-icon-box blue">🌐</div>
+        <div class="cat-text">
+            <h3>General FAQ</h3>
+            <p>18 articles</p>
         </div>
-    </section>
+    </a>
 
-    <section class="py-12">
-        <div class="max-w-4xl mx-auto px-4">
-            
-            <div class="mb-12">
-                <h2 class="text-xl font-black uppercase tracking-widest text-[#ffb800] mb-6 flex items-center gap-3">
-                    <i class="fa-solid fa-circle-info"></i> General Information
-                </h2>
-                <div class="space-y-4">
-                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
-                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
-                            <span class="font-bold">What is CK Funded Pro?</span>
-                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
-                                CK Funded Pro is a proprietary firm that provides traders with up to $200,000 in virtual capital. Traders keep up to 90% of the profits they generate while we cover all the potential losses.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
-                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
-                            <span class="font-bold">Who is eligible to join?</span>
-                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
-                                Anyone over the age of 18 from any country (excluding restricted jurisdictions) can sign up and participate in our evaluation process.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-12">
-                <h2 class="text-xl font-black uppercase tracking-widest text-[#ffb800] mb-6 flex items-center gap-3">
-                    <i class="fa-solid fa-chart-line"></i> Trading Rules
-                </h2>
-                <div class="space-y-4">
-                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
-                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
-                            <span class="font-bold">What are the drawdown limits?</span>
-                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
-                                We utilize a 5% Daily Drawdown and a 10% Maximum Overall Drawdown. These are calculated based on your starting balance or the equity at the end of the previous day, whichever is higher.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item bg-[#111] border border-white/5 rounded-3xl overflow-hidden">
-                        <button onclick="toggleAccordion(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
-                            <span class="font-bold">Are news trading and EAs allowed?</span>
-                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-4">
-                                Yes! CK Funded Pro is designed for professionals. We allow News Trading, EAs (Expert Advisors), and weekend holding on our Pro accounts.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <!-- Evaluation -->
+    <a href="evaluation-rules.html" class="cat-card">
+        <div class="cat-icon-box gray">📚</div>
+        <div class="cat-text">
+            <h3>Evaluation and Rules</h3>
+            <p>6 articles</p>
         </div>
-    </section>
+    </a>
 
-    <section class="py-20">
-        <div class="max-w-xl mx-auto px-4 text-center bg-[#ffb800] p-12 rounded-[50px] text-black">
-            <h3 class="text-3xl font-black italic mb-4">Still have questions?</h3>
-            <p class="font-bold opacity-80 mb-8">Our support team is available 24/7 via Live Chat and Email.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:support@ckfundedpro.com" class="bg-black text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-sm">Email Support</a>
-                <a href="#" class="border-2 border-black px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-sm">Live Chat</a>
-            </div>
+    <!-- Funded Account -->
+    <a href="funded-account.html" class="cat-card">
+        <div class="cat-icon-box white">📄</div>
+        <div class="cat-text">
+            <h3>Funded Account and Scaling</h3>
+            <p>6 articles</p>
         </div>
-    </section>
+    </a>
+
+    <!-- Payments -->
+    <a href="payments-refunds.html" class="cat-card">
+        <div class="cat-icon-box gold">🤝</div>
+        <div class="cat-text">
+            <h3>Payments and Refunds</h3>
+            <p>3 articles</p>
+        </div>
+    </a>
+
+    <!-- Support -->
+    <a href="platform-support.html" class="cat-card">
+        <div class="cat-icon-box gold">⭐</div>
+        <div class="cat-text">
+            <h3>Platform and Support</h3>
+            <p>2 articles</p>
+        </div>
+    </a>
+
+    <!-- 1-Step -->
+    <a href="one-step-challenge.html" class="cat-card">
+        <div class="cat-icon-box orange">📊</div>
+        <div class="cat-text">
+            <h3>1-Step Challenge</h3>
+            <p>9 articles</p>
+        </div>
+    </a>
+
+    <!-- 2-Step -->
+    <a href="two-step-challenge.html" class="cat-card">
+        <div class="cat-icon-box orange">📊</div>
+        <div class="cat-text">
+            <h3>2-Step Challenge</h3>
+            <p>6 articles</p>
+        </div>
+    </a>
+
+    <!-- Instant Funding -->
+    <a href="instant-funding.html" class="cat-card">
+        <div class="cat-icon-box orange">📊</div>
+        <div class="cat-text">
+            <h3>Instant Funding Challenge</h3>
+            <p>12 articles</p>
+        </div>
+    </a>
+    
+    <!-- Trading Basics -->
+    <a href="trading-basics.html" class="cat-card">
+        <div class="cat-icon-box blue">🖥️</div>
+        <div class="cat-text">
+            <h3>Trading Basics</h3>
+            <p>8 articles</p>
+        </div>
+    </a>
+
+    <!-- Refer & Earn -->
+    <a href="refer-earn.html" class="cat-card">
+        <div class="cat-icon-box white">👥</div>
+        <div class="cat-text">
+            <h3>Refer & Earn</h3>
+            <p>3 articles</p>
+        </div>
+    </a>
+</div>
+</section>
+
+<style>
+    /* Section Setup */
+    .help-center {
+        padding: 60px 20px;
+        background: transparent;
+        color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        text-align: center;
+    }
+
+    .help-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .guide-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        letter-spacing: -0.5px;
+    }
+
+    /* Search Bar Styles */
+    .search-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto 40px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+    .search-container input {
+        width: 100%;
+        padding: 18px 18px 18px 50px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+    }
+
+    /* Most Viewed Box Styles */
+    .most-viewed-box {
+        background: #0f0f0f;
+        border: 1px solid #1a1a1a;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .most-viewed-box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 40px;
+    }
+
+    .article-link {
+        color: #bbb;
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        transition: color 0.2s;
+    }
+
+    .article-link:hover { color: #ffb400; }
+    .chevron { color: #ffb400; font-size: 1.2rem; }
+
+    /* Category Cards Grid Styles */
+    .category-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .cat-card {
+        background: #0f0f0f;
+        border: 1px solid #1a1a1a;
+        border-radius: 16px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .cat-card:hover {
+        transform: translateY(-3px);
+        border-color: #333;
+    }
+
+    .cat-icon-box {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .cat-text h3 { font-size: 1.05rem; margin: 0 0 5px 0; font-weight: 500; }
+    .cat-text p { font-size: 0.85rem; color: #888; margin: 0; }
+
+    /* Icon specific colors for Pipstone brand */
+    .gold { color: #ffb400; }
+    .orange { color: #ff6b00; }
+    .blue { color: #007aff; }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .articles-grid, .category-grid { grid-template-columns: 1fr; }
+        .guide-title { font-size: 1.8rem; }
+    }
+</style>
 
     <!-- START FOOTER -->
 <footer class="bg-black pt-24 pb-12 border-t border-white/5 relative z-10">
@@ -212,12 +401,6 @@
     </div>
 </footer>
 
-<!-- Floating Chat Button (Optional, as seen in your screenshot) -->
-<div class="fixed bottom-6 right-6 z-50">
-    <button class="w-14 h-14 bg-[#ffb800] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-    </button>
-</div>
 
     <script>
         function toggleAccordion(button) {
@@ -232,5 +415,197 @@
             }
         }
     </script>
+
+    
+    <!-- CK Funded Pro Live Chat Section -->
+<div class="chat-wrapper">
+    <!-- Chat Toggle Button (The Launcher) -->
+    <button class="chat-launcher" onclick="toggleChat()">
+        <span class="chat-icon">💬</span>
+    </button>
+
+    <!-- Chat Window Interface -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="status-dot"></div>
+                <h3>CK Funded Pro Support</h3>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">×</button>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">
+                Hello! How can we help you with your funding challenge today?
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKey(event)">
+            <!-- Enter Cursor / Send Button -->
+            <button class="send-btn" onclick="sendMessage()">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- PLACE YOUR BOT SCRIPT (E.G., TAWK.TO) HERE -->
+<!-- 
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> 
+-->
+
+<style>
+    /* Styling for CK Funded Pro Theme */
+    .chat-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Launcher Button */
+    .chat-launcher {
+        width: 60px;
+        height: 60px;
+        background-color: #ffb400; /* Signature Gold */
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .chat-launcher:hover { transform: scale(1.1); }
+
+    /* Chat Window */
+    .chat-window {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 350px;
+        height: 450px;
+        background: #121212; /* Dark Theme */
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.1);
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .chat-header {
+        background: #1a1a1a;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .header-info { display: flex; align-items: center; gap: 10px; }
+    .status-dot { width: 8px; height: 8px; background: #4caf50; border-radius: 50%; }
+    .chat-header h3 { font-size: 0.95rem; color: #fff; margin: 0; }
+    .close-chat { background: none; border: none; color: #888; font-size: 20px; cursor: pointer; }
+
+    .chat-body {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .bot-message { background: #333; color: #fff; align-self: flex-start; }
+    .user-message { background: #ffb400; color: #000; align-self: flex-end; }
+
+    /* Footer & Input */
+    .chat-footer {
+        padding: 15px;
+        background: #1a1a1a;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .chat-footer input {
+        flex: 1;
+        background: #222;
+        border: 1px solid #444;
+        border-radius: 20px;
+        padding: 8px 15px;
+        color: #fff;
+        outline: none;
+    }
+
+    .send-btn {
+        background: none;
+        border: none;
+        color: #ffb400;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s;
+    }
+
+    .send-btn:hover { transform: translateX(3px); }
+</style>
+
+<script>
+    function toggleChat() {
+        const win = document.getElementById('chatWindow');
+        win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function handleKey(e) {
+        if (e.key === 'Enter') sendMessage();
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('userInput');
+        const body = document.getElementById('chatBody');
+
+        if (input.value.trim() !== "") {
+            // Add User Message
+            const msg = document.createElement('div');
+            msg.className = 'message user-message';
+            msg.innerText = input.value;
+            body.appendChild(msg);
+
+            // Clear Input and Scroll
+            input.value = "";
+            body.scrollTop = body.scrollHeight;
+
+            // Optional: Connect this to your Tawk_API.sendMessage() if using a real bot
+        }
+    }
+</script>
+
 </body>
 </html>

@@ -1375,3 +1375,19 @@ label {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
+
+.center-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; 
+    height: 60px;
+    background: #ffb800; /* Signature Yellow */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(255, 184, 0, 0.3);
+    border: 2px solid rgba(0,0,0,0.1); /* Adds a slight industrial edge */
+}

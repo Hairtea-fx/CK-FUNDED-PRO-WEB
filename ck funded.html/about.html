@@ -65,67 +65,648 @@
     </div>
 </nav>
 
-    <section class="py-24 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="max-w-3xl">
-                <h1 class="text-7xl font-black tracking-tighter mb-8 italic">WE EMPOWER <span class="text-[#ffb800]">TRADERS.</span></h1>
-                <p class="text-xl text-gray-400 leading-relaxed">
-                    CK Funded Pro was built by traders, for traders. We strip away the complicated rules of traditional prop firms to provide a clear, fair path to professional capital.
-                </p>
+   <!-- Hero Section Replicating image_001664.png -->
+<section class="hero-section">
+    <div class="content-wrapper">
+        <h1 class="main-heading">Changing Lives,<br>One Trade at a Time</h1>
+
+        <div class="text-block">
+            <p>
+                <strong>Pipstone Capital</strong> is a trader development and education platform dedicated to empowering 
+                individuals through structured, simulation-based challenges. Our programs are designed to 
+                help learners strengthen discipline, improve decision-making, and grow through a realistic, risk-
+                free <strong>simulated environment</strong>.
+            </p>
+            
+            <p>
+                Our team of educators, analysts, and technologists work together to create a space where 
+                performance is measured responsibly, progress is encouraged, and consistency is valued. At 
+                <strong>Pipstone Capital</strong>, we are committed to helping traders develop the skills, habits, and 
+                confidence needed to succeed in a <strong>safe</strong> and <strong>supportive</strong> learning ecosystem.
+            </p>
+        </div>
+
+        <div class="cta-group">
+            <a href="#" class="btn btn-gold">Our Misison</a>
+            <a href="#" class="btn btn-white">Our Vision</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+        background: transparent; /* Background remains transparent */
+        color: #ffffff; /* Optimized for a dark overlay or background */
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .content-wrapper {
+        max-width: 850px;
+    }
+
+    .main-heading {
+        font-size: 4.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        letter-spacing: -2px;
+    }
+
+    .text-block p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1.5rem;
+    }
+
+    .text-block strong {
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .cta-group {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn-gold {
+        background-color: #ffb400;
+        color: #000;
+    }
+
+    .btn-white {
+        background-color: #ffffff;
+        color: #000;
+    }
+
+    @media (max-width: 768px) {
+        .main-heading { font-size: 2.8rem; }
+        .cta-group { flex-direction: column; align-items: center; }
+        .btn { width: 100%; max-width: 250px; }
+    }
+</style>
+
+   <!-- Principles Section -->
+<section class="principles-section">
+    <h2 class="section-title">Principles We Live By</h2>
+    
+    <div class="principles-grid">
+        <!-- Card 1 -->
+        <div class="principle-card">
+            <div class="icon-circle">🧠</div>
+            <h3>Think Big, Move Smart</h3>
+            <p>We bold steps but never compromise on precision. Every move is calculated purpose and vision.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="principle-card">
+            <div class="icon-circle">📥</div>
+            <h3>Own It, Deliver It</h3>
+            <p>We take full responsibility for our actions and always follow through — results matter.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="principle-card">
+            <div class="icon-circle">✦</div>
+            <h3>Win Together</h3>
+            <p>Collaboration beats competition. We support each other and grow as one—traders, partners, and staff alike.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="principle-card">
+            <div class="icon-circle">✔</div>
+            <h3>Keep It Real</h3>
+            <p>Honesty, transparency, and authenticity are non-negotiable. No fluff. No shortcuts.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="principle-card">
+            <div class="icon-circle">💡</div>
+            <h3>Push Boundaries</h3>
+            <p>We're here to challenge the norm — evolving, improving, and finding better ways to empower our traders.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="principle-card">
+            <div class="icon-circle">🎓</div>
+            <h3>Simplify The Complex</h3>
+            <p>We make trading accessible by removing noise and focusing on what truly drives success.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .principles-section {
+        padding: 60px 20px;
+        background: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 50px;
+        letter-spacing: -1px;
+    }
+
+    .principles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .principle-card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: left;
+        transition: transform 0.3s ease;
+    }
+
+    .principle-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 180, 0, 0.4);
+    }
+
+    .icon-circle {
+        width: 45px;
+        height: 45px;
+        background-color: #ffb400; /* Gold/Yellow from image */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+        color: #000;
+    }
+
+    .principle-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .principle-card p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .principles-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+        .principles-grid { grid-template-columns: 1fr; }
+        .section-title { font-size: 2.2rem; }
+    }
+</style>
+
+<!-- Mission Section Replicating image_025178.png -->
+<section class="mission-section">
+    <div class="mission-container">
+        <!-- Left Side: Image -->
+        <div class="image-column">
+            <div class="image-wrapper">
+                <!-- Replace with your actual image source -->
+                <img src="your-image-here.jpg" alt="Traders working" class="main-img">
             </div>
         </div>
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ffb800]/10 blur-[120px] rounded-full -mr-64 -mt-64"></div>
-    </section>
 
-    <section class="py-20 bg-[#080808]">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                
-                <div class="space-y-4">
-                    <div class="text-[#ffb800] text-4xl font-black">01</div>
-                    <h3 class="text-2xl font-bold italic">Transparency</h3>
-                    <p class="text-gray-500">No hidden rules. No "gotchas" in the fine print. What you see on our challenge page is exactly how we operate.</p>
-                </div>
+        <!-- Right Side: Content -->
+        <div class="content-column">
+            <h2 class="mission-title">
+                The Mission That<br>
+                <span class="highlight-text">Moves Us</span>
+            </h2>
 
-                <div class="space-y-4">
-                    <div class="text-[#ffb800] text-4xl font-black">02</div>
-                    <h3 class="text-2xl font-bold italic">Fast Payouts</h3>
-                    <p class="text-gray-500">You do the work, you get the reward. We pride ourselves on having the fastest payout processing in the industry.</p>
-                </div>
+            <div class="mission-body">
+                <h3>Empowering Traders Without Limits</h3>
+                <p>
+                    To empower skilled traders by eliminating access limitations 
+                    and providing the structure, trust, and support they need to 
+                    grow, succeed, and take ownership of their trading journey — 
+                    enabling them to focus fully on their strategies, unlock their full 
+                    potential, and thrive in a system grounded in merit, 
+                    transparency, and opportunity.
+                </p>
+            </div>
 
-                <div class="space-y-4">
-                    <div class="text-[#ffb800] text-4xl font-black">03</div>
-                    <h3 class="text-2xl font-bold italic">Scale Limitless</h3>
-                    <p class="text-gray-500">Our scaling plan allows consistent traders to manage up to $2M in capital with a 90% profit split.</p>
-                </div>
-
+            <div class="mission-actions">
+                <a href="#" class="btn btn-gold">Start The Challenge</a>
+                <a href="#" class="btn btn-white">Partner With Us</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative">
-                <div class="aspect-square bg-gradient-to-br from-[#ffb800] to-orange-600 rounded-[40px] rotate-3 opacity-20 absolute inset-0"></div>
-                <div class="aspect-square bg-[#111] border border-white/10 rounded-[40px] relative z-10 flex items-center justify-center p-12">
-                   <i class="fa-solid fa-gem text-[#ffb800] text-9xl animate-pulse"></i>
-                </div>
+<style>
+    .mission-section {
+        padding: 60px 20px;
+        background: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        color: #ffffff;
+    }
+
+    .mission-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    /* Image Styling */
+    .image-wrapper {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        background: #1a1a1a; /* Placeholder if image fails */
+    }
+
+    .main-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Text Styling */
+    .mission-title {
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+        margin-bottom: 2.5rem;
+        letter-spacing: -1.5px;
+    }
+
+    .highlight-text {
+        color: #888888; /* The greyed out second line */
+    }
+
+    .mission-body h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .mission-body p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 2.5rem;
+    }
+
+    /* Buttons */
+    .mission-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .btn-gold {
+        background-color: #ffb400;
+        color: #000;
+    }
+
+    .btn-white {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .mission-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        .mission-actions {
+            justify-content: center;
+        }
+        .mission-title {
+            font-size: 2.5rem;
+        }
+        .image-column {
+            order: -1;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<!-- Vision Section Replicating image_f62956.jpg -->
+<section class="vision-section">
+    <div class="vision-container">
+        <!-- Left Side: Content -->
+        <div class="content-column">
+            <h2 class="vision-title">
+                Vision That Fuels<br>
+                <span class="highlight-text">Our Growth</span>
+            </h2>
+
+            <div class="vision-body">
+                <h3>Breaking Barriers, Building Trader Success</h3>
+                <p>
+                    To become the most trader-focused prop firm in the world — 
+                    one that transforms potential into performance, and trading 
+                    into a life-changing opportunity.
+                </p>
             </div>
-            <div class="space-y-6">
-                <h2 class="text-5xl font-black tracking-tighter">OUR STORY</h2>
-                <p class="text-gray-400 italic text-lg">"The industry was broken, so we fixed it."</p>
-                <p class="text-gray-500 leading-relaxed">
-                    CK Funded Pro started with a simple observation: most prop firms are designed for traders to fail. Between impossible profit targets and restrictive time limits, the odds were stacked against the retail trader. 
-                </p>
-                <p class="text-gray-500 leading-relaxed">
-                    We decided to pivot. By offering <strong>unlimited time</strong> and <strong>equity-based drawdowns</strong>, we created an environment where talent can actually thrive. Today, we support thousands of traders globally on their journey to financial freedom.
-                </p>
-                <div class="pt-8">
-                    <a href="challenge.html" class="inline-block bg-white text-black font-black px-10 py-4 rounded-2xl hover:bg-[#ffb800] transition-colors">START YOUR JOURNEY</a>
-                </div>
+
+            <div class="vision-actions">
+                <a href="#" class="btn btn-gold">Start The Challenge</a>
+                <a href="#" class="btn btn-white">Get In Touch</a>
             </div>
         </div>
-    </section>
+
+        <!-- Right Side: Image -->
+        <div class="image-column">
+            <div class="image-wrapper">
+                <!-- Replace with your actual image source -->
+                <img src="your-vision-image.jpg" alt="Our Team" class="main-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .vision-section {
+        padding: 60px 20px;
+        background: transparent; /* Transparent background as requested */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        color: #ffffff;
+    }
+
+    .vision-container {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr; /* Slightly wider text column for better balance */
+        gap: 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    /* Text Styling */
+    .vision-title {
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        letter-spacing: -1.5px;
+    }
+
+    .highlight-text {
+        color: #7a7a7a; /* Muted grey for the secondary title text */
+    }
+
+    .vision-body h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+    }
+
+    .vision-body p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 2.5rem;
+        max-width: 500px;
+    }
+
+    /* Buttons */
+    .vision-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .btn-gold {
+        background-color: #ffb400;
+        color: #000000;
+    }
+
+    .btn-white {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    /* Image Styling */
+    .image-wrapper {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 28px; /* High-radius rounded corners matching image_f62956.jpg */
+        overflow: hidden;
+        aspect-ratio: 1 / 1.1; /* Slightly taller aspect ratio as seen in the photo */
+        background: #111; /* Fallback */
+    }
+
+    .main-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .vision-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        .vision-actions {
+            justify-content: center;
+        }
+        .vision-title {
+            font-size: 2.8rem;
+        }
+        .vision-body p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .image-column {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<!-- CEO & Team Section with Functional Slider -->
+<section class="ceo-section">
+    <div class="ceo-container">
+        <!-- Image Column -->
+        <div class="ceo-image-wrapper">
+            <img id="member-img" src="ceo-image.jpg" alt="Team Member" class="ceo-img">
+        </div>
+
+        <!-- Content Column -->
+        <div class="ceo-content">
+            <div class="quote-icon">
+                <svg width="45" height="35" viewBox="0 0 45 35" fill="#ffb400">
+                    <path d="M0 35h15L22.5 0h-15L0 35zm22.5 0h15L45 0h-15l-7.5 35z"/>
+                </svg>
+            </div>
+            
+            <div class="quote-text">
+                <p id="member-quote">Starting out as a trader over a decade ago, I faced the same challenge many do — not a lack of passion or willingness to learn, but the absence of a structured environment to properly develop and test my skills...</p>
+            </div>
+
+            <div class="ceo-signature">
+                <p class="name" id="member-name">— Umair Raja</p>
+                <p class="title" id="member-title">Founder & CEO, Pipstone Capital</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Navigation (The Moving Cursor) -->
+    <div class="team-slider-controls">
+        <button class="slider-arrow" onclick="changeMember(-1)">←</button>
+        <div class="slider-dots" id="dots-container">
+            <!-- Dots generated by JS -->
+        </div>
+        <button class="slider-arrow" onclick="changeMember(1)">→</button>
+    </div>
+</section>
+
+<style>
+    /* Styling remains consistent with your design */
+    .ceo-section { padding: 60px 20px; background: transparent; color: #fff; font-family: sans-serif; }
+    .ceo-container { display: grid; grid-template-columns: 400px 1fr; gap: 60px; max-width: 1100px; margin: 0 auto; text-align: left; }
+    .ceo-image-wrapper { border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; overflow: hidden; aspect-ratio: 0.85/1; }
+    .ceo-img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
+    .quote-text { min-height: 250px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8); }
+    .ceo-signature .name { font-size: 1.2rem; font-weight: 700; margin: 0; }
+    .ceo-signature .title { color: #888; font-size: 0.9rem; }
+
+    /* Slider UI */
+    .team-slider-controls { margin-top: 40px; display: flex; justify-content: center; align-items: center; gap: 20px; }
+    .slider-arrow { background: rgba(255,255,255,0.1); border: 1px solid #444; color: #fff; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; }
+    .slider-arrow:hover { background: #ffb400; color: #000; }
+    
+    .slider-dots { display: flex; gap: 10px; align-items: center; }
+    .dot { width: 8px; height: 8px; background: #444; border-radius: 50%; transition: 0.3s; }
+    .dot.active { background: #ffb400; width: 25px; border-radius: 10px; }
+
+    @media (max-width: 900px) { .ceo-container { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+    // 1. Define your team members here
+    const team = [
+        {
+            name: "— Umair Raja",
+            title: "Founder & CEO, Pipstone Capital",
+            quote: "Starting out as a trader over a decade ago, I faced the same challenge many do — not a lack of passion... I built this platform to be everything I wish existed back then.",
+            image: "ceo-image.jpg" 
+        },
+        {
+            name: "— Sarah Chen",
+            title: "Head of Trading Strategy",
+            quote: "Our mission is to provide the technical bridge between raw talent and professional execution. Data-driven discipline is at the heart of everything we teach here.",
+            image: "member2.jpg"
+        },
+        {
+            name: "— Marcus Vane",
+            title: "Risk Management Director",
+            quote: "Survival in the markets isn't about the biggest wins, but about the smartest defenses. We empower our traders to understand risk as a tool, not a fear.",
+            image: "member3.jpg"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    // 2. Function to update the UI
+    function updateSlider() {
+        const member = team[currentIndex];
+        
+        // Update Content
+        document.getElementById('member-img').style.opacity = 0;
+        setTimeout(() => {
+            document.getElementById('member-img').src = member.image;
+            document.getElementById('member-img').style.opacity = 1;
+        }, 300);
+
+        document.getElementById('member-name').innerText = member.name;
+        document.getElementById('member-title').innerText = member.title;
+        document.getElementById('member-quote').innerText = member.quote;
+
+        // Update Dots
+        renderDots();
+    }
+
+    function changeMember(direction) {
+        currentIndex += direction;
+        if (currentIndex >= team.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = team.length - 1;
+        updateSlider();
+    }
+
+    function renderDots() {
+        const container = document.getElementById('dots-container');
+        container.innerHTML = '';
+        team.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = `dot ${index === currentIndex ? 'active' : ''}`;
+            container.appendChild(dot);
+        });
+    }
+
+    // Initialize
+    renderDots();
+</script>
 
     <!-- START FOOTER -->
 <footer class="bg-black pt-24 pb-12 border-t border-white/5 relative z-10">
@@ -207,12 +788,195 @@
     </div>
 </footer>
 
-<!-- Floating Chat Button (Optional, as seen in your screenshot) -->
-<div class="fixed bottom-6 right-6 z-50">
-    <button class="w-14 h-14 bg-[#ffb800] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <!-- CK Funded Pro Live Chat Section -->
+<div class="chat-wrapper">
+    <!-- Chat Toggle Button (The Launcher) -->
+    <button class="chat-launcher" onclick="toggleChat()">
+        <span class="chat-icon">💬</span>
     </button>
+
+    <!-- Chat Window Interface -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="status-dot"></div>
+                <h3>CK Funded Pro Support</h3>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">×</button>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">
+                Hello! How can we help you with your funding challenge today?
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKey(event)">
+            <!-- Enter Cursor / Send Button -->
+            <button class="send-btn" onclick="sendMessage()">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </div>
+
+<!-- PLACE YOUR BOT SCRIPT (E.G., TAWK.TO) HERE -->
+<!-- 
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> 
+-->
+
+<style>
+    /* Styling for CK Funded Pro Theme */
+    .chat-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Launcher Button */
+    .chat-launcher {
+        width: 60px;
+        height: 60px;
+        background-color: #ffb400; /* Signature Gold */
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .chat-launcher:hover { transform: scale(1.1); }
+
+    /* Chat Window */
+    .chat-window {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 350px;
+        height: 450px;
+        background: #121212; /* Dark Theme */
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.1);
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .chat-header {
+        background: #1a1a1a;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .header-info { display: flex; align-items: center; gap: 10px; }
+    .status-dot { width: 8px; height: 8px; background: #4caf50; border-radius: 50%; }
+    .chat-header h3 { font-size: 0.95rem; color: #fff; margin: 0; }
+    .close-chat { background: none; border: none; color: #888; font-size: 20px; cursor: pointer; }
+
+    .chat-body {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .bot-message { background: #333; color: #fff; align-self: flex-start; }
+    .user-message { background: #ffb400; color: #000; align-self: flex-end; }
+
+    /* Footer & Input */
+    .chat-footer {
+        padding: 15px;
+        background: #1a1a1a;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .chat-footer input {
+        flex: 1;
+        background: #222;
+        border: 1px solid #444;
+        border-radius: 20px;
+        padding: 8px 15px;
+        color: #fff;
+        outline: none;
+    }
+
+    .send-btn {
+        background: none;
+        border: none;
+        color: #ffb400;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s;
+    }
+
+    .send-btn:hover { transform: translateX(3px); }
+</style>
+
+<script>
+    function toggleChat() {
+        const win = document.getElementById('chatWindow');
+        win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function handleKey(e) {
+        if (e.key === 'Enter') sendMessage();
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('userInput');
+        const body = document.getElementById('chatBody');
+
+        if (input.value.trim() !== "") {
+            // Add User Message
+            const msg = document.createElement('div');
+            msg.className = 'message user-message';
+            msg.innerText = input.value;
+            body.appendChild(msg);
+
+            // Clear Input and Scroll
+            input.value = "";
+            body.scrollTop = body.scrollHeight;
+
+            // Optional: Connect this to your Tawk_API.sendMessage() if using a real bot
+        }
+    }
+</script>
 
 </body>
 </html>

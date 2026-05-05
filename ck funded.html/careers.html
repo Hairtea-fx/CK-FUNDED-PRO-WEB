@@ -269,12 +269,195 @@
     </div>
 </footer>
 
-<!-- Floating Chat Button (Optional, as seen in your screenshot) -->
-<div class="fixed bottom-6 right-6 z-50">
-    <button class="w-14 h-14 bg-[#ffb800] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <!-- CK Funded Pro Live Chat Section -->
+<div class="chat-wrapper">
+    <!-- Chat Toggle Button (The Launcher) -->
+    <button class="chat-launcher" onclick="toggleChat()">
+        <span class="chat-icon">💬</span>
     </button>
+
+    <!-- Chat Window Interface -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="status-dot"></div>
+                <h3>CK Funded Pro Support</h3>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">×</button>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">
+                Hello! How can we help you with your funding challenge today?
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKey(event)">
+            <!-- Enter Cursor / Send Button -->
+            <button class="send-btn" onclick="sendMessage()">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </div>
+
+<!-- PLACE YOUR BOT SCRIPT (E.G., TAWK.TO) HERE -->
+<!-- 
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> 
+-->
+
+<style>
+    /* Styling for CK Funded Pro Theme */
+    .chat-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Launcher Button */
+    .chat-launcher {
+        width: 60px;
+        height: 60px;
+        background-color: #ffb400; /* Signature Gold */
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .chat-launcher:hover { transform: scale(1.1); }
+
+    /* Chat Window */
+    .chat-window {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 350px;
+        height: 450px;
+        background: #121212; /* Dark Theme */
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.1);
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .chat-header {
+        background: #1a1a1a;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .header-info { display: flex; align-items: center; gap: 10px; }
+    .status-dot { width: 8px; height: 8px; background: #4caf50; border-radius: 50%; }
+    .chat-header h3 { font-size: 0.95rem; color: #fff; margin: 0; }
+    .close-chat { background: none; border: none; color: #888; font-size: 20px; cursor: pointer; }
+
+    .chat-body {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .bot-message { background: #333; color: #fff; align-self: flex-start; }
+    .user-message { background: #ffb400; color: #000; align-self: flex-end; }
+
+    /* Footer & Input */
+    .chat-footer {
+        padding: 15px;
+        background: #1a1a1a;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .chat-footer input {
+        flex: 1;
+        background: #222;
+        border: 1px solid #444;
+        border-radius: 20px;
+        padding: 8px 15px;
+        color: #fff;
+        outline: none;
+    }
+
+    .send-btn {
+        background: none;
+        border: none;
+        color: #ffb400;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s;
+    }
+
+    .send-btn:hover { transform: translateX(3px); }
+</style>
+
+<script>
+    function toggleChat() {
+        const win = document.getElementById('chatWindow');
+        win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function handleKey(e) {
+        if (e.key === 'Enter') sendMessage();
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('userInput');
+        const body = document.getElementById('chatBody');
+
+        if (input.value.trim() !== "") {
+            // Add User Message
+            const msg = document.createElement('div');
+            msg.className = 'message user-message';
+            msg.innerText = input.value;
+            body.appendChild(msg);
+
+            // Clear Input and Scroll
+            input.value = "";
+            body.scrollTop = body.scrollHeight;
+
+            // Optional: Connect this to your Tawk_API.sendMessage() if using a real bot
+        }
+    }
+</script>
 
 </body>
 </html>
