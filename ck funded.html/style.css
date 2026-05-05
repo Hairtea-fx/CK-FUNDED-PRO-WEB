@@ -1646,8 +1646,11 @@ label {
     .trustpilot-bar {
         flex-direction: column;
         gap: 0.75rem;
-        margin: 1rem 0 5rem 0;
-        padding-right: 80px;
+        margin: 1rem auto 5rem auto;
+        padding-right: 0;
+        width: min(100%, 320px);
+        align-items: center;
+        text-align: center;
     }
 
     .tp-text, .tp-brand {
