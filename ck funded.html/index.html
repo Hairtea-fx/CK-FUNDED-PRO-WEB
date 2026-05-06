@@ -1274,15 +1274,7 @@ s0.parentNode.insertBefore(s1,s0);
         hamburgerBtn.addEventListener('click', function () {
             const isActive = mobileNavOverlay.classList.toggle('active');
             hamburgerBtn.classList.toggle('active');
-            
-            // Hide action bar when menu is open, show when closed
-            if (isActive) {
-                body.style.overflow = 'hidden';
-                if (mobileActionBar) mobileActionBar.style.display = 'none';
-            } else {
-                body.style.overflow = 'auto';
-                if (mobileActionBar) mobileActionBar.style.display = 'flex';
-            }
+            body.style.overflow = isActive ? 'hidden' : 'auto';
         });
 
         // Close menu when a link is clicked

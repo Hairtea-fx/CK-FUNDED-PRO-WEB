@@ -2146,7 +2146,7 @@ label {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.98);
-    z-index: 999;
+    z-index: 1000;
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -2159,6 +2159,10 @@ label {
 .mobile-nav-overlay.active {
     display: flex;
     opacity: 1;
+}
+
+.mobile-action-bar {
+    z-index: 1002;
 }
 
 /* Mobile Menu List */
