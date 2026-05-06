@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | CK Funded Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#050505] text-white font-sans">
+
+    <nav class="p-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-[#050505]/80">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="h-8"></a>
+            <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
+                <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="text-[#ffb800]">About</a>
+                <a href="challenge.html" class="text-gray-400 hover:text-white transition-colors">Challenge</a>
+                <a href="dashboard.html" class="text-gray-400 hover:text-white transition-colors">Dashboard</a>
+            </div>
+            <a href="challenge.html" class="bg-[#ffb800] text-black px-6 py-2 rounded-full font-black text-xs uppercase hover:scale-105 transition-transform">Get Funded</a>
+        </div>
+    </nav><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK Funded Pro | The Future of Prop Trading</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
@@ -24,13 +46,7 @@
         <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
     </div>
 
-    <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <ul class="nav-menu" id="main-navigation">
+    <ul class="nav-menu">
         <li><a href="./index.html" class="active">Home</a></li>
         <li><a href="./challenge.html" class="hover:text-[#ffb800] transition-colors">Challenge</a></li>
         <li><a href="./dashboard.html" class="hover:text-[#ffb800] transition-colors">Dashboard</a></li>
@@ -48,51 +64,6 @@
         <a href="#" class="btn-login">Login</a>
         <a href="#" class="btn-cta">Get Started</a>
     </div>
-
-    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black z-[2000] hidden flex-col p-8 pt-24 overflow-y-auto">
-        <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <ul class="flex flex-col space-y-8 text-left">
-            <li><a href="./index.html" class="text-white text-4xl font-bold active">Home</a></li>
-            <li><a href="./challenge.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">Challenges</a></li>
-            <li><a href="./about.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">About Us</a></li>
-            <li><a href="./blog.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">Blogs</a></li>
-            <li><a href="./affiliate.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">Affiliate</a></li>
-            <li><a href="./faq.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">FAQ</a></li>
-        </ul>
-    </div>
-
-    <!-- FIXED BOTTOM ACTION BAR (Mobile Only) -->
-    <div class="fixed bottom-0 left-0 w-full bg-black/95 border-t border-white/5 p-4 flex gap-4 z-[1500] md:hidden">
-        <a href="#" class="flex-1 bg-white text-black font-black py-4 rounded-xl text-center text-lg">Register</a>
-        <a href="#" class="flex-1 bg-[#ffb800] text-black font-black py-4 rounded-xl text-center text-lg">Login</a>
-        
-        <!-- Floating Chat Icon -->
-        <div class="absolute right-6 -top-6 bg-[#ffb800] text-black w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl">
-            <i class="fa-solid fa-comment text-2xl"></i>
-        </div>
-    </div>
-
-    <!-- Simple Script to Handle the Hamburger -->
-    <script>
-        const burger = document.querySelector('.hamburger-menu');
-        const overlay = document.getElementById('mobile-nav-overlay');
-        const closeBtn = document.getElementById('close-menu');
-
-        burger.addEventListener('click', () => {
-            overlay.classList.remove('hidden');
-            overlay.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            overlay.classList.add('hidden');
-            overlay.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        });
-    </script>
-    
 </nav>
 
 
