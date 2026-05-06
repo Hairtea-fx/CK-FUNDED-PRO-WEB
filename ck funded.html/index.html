@@ -50,22 +50,20 @@
     </div>
 
     <!-- Mobile Navigation Overlay (Hidden by default) -->
-<div id="mobile-nav-overlay" class="fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-[#0a0a0a] z-[999] transition-all duration-300 transform -translate-x-full overflow-y-auto pb-32">
-    <ul class="flex flex-col p-6 space-y-6">
-        <li><a href="./index.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Home</a></li>
-        <li><a href="./challenge.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Challenges</a></li>
-        <li><a href="./about.html" class="text-white text-lg font-medium hover:text-[#ffb800]">About Us</a></li>
-        <li><a href="./blog.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Blogs</a></li>
-        <li><a href="./affiliate.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Affiliate Program</a></li>
-        <li><a href="./faq.html" class="text-white text-lg font-medium hover:text-[#ffb800]">FAQ</a></li>
-    </ul>
-</div>
-
-<!-- Mobile Bottom Action Bar (Fixed to Bottom) -->
-<div class="fixed bottom-0 left-0 w-full bg-[#0a0a0a] p-4 flex gap-4 z-[1000] md:hidden border-t border-white/5">
-    <a href="#" class="flex-1 bg-white text-black font-bold py-3 rounded-lg text-center">Register</a>
-    <a href="#" class="flex-1 bg-[#ffb800] text-black font-bold py-3 rounded-lg text-center">Login</a>
-</div>
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0a0a0a] z-[1000] flex flex-col p-8 pt-24">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <ul class="space-y-8">
+            <li><a href="./index.html" class="text-white text-2xl font-medium">Home</a></li>
+            <li><a href="./challenge.html" class="text-white text-2xl font-medium">Challenges</a></li>
+            <li><a href="./about.html" class="text-white text-2xl font-medium">About Us</a></li>
+            <li><a href="./blog.html" class="text-white text-2xl font-medium">Blogs</a></li>
+            <li><a href="./affiliate.html" class="text-white text-2xl font-medium">Affiliate Program</a></li>
+            <li><a href="./faq.html" class="text-white text-2xl font-medium">FAQ</a></li>
+        </ul>
+    </div>
 
 
 
