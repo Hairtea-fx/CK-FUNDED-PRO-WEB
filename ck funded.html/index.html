@@ -48,6 +48,51 @@
         <a href="#" class="btn-login">Login</a>
         <a href="#" class="btn-cta">Get Started</a>
     </div>
+
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black z-[2000] hidden flex-col p-8 pt-24 overflow-y-auto">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="flex flex-col space-y-8 text-left">
+            <li><a href="./index.html" class="text-white text-4xl font-bold active">Home</a></li>
+            <li><a href="./challenge.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">Challenges</a></li>
+            <li><a href="./about.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">About Us</a></li>
+            <li><a href="./blog.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">Blogs</a></li>
+            <li><a href="./affiliate.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">Affiliate</a></li>
+            <li><a href="./faq.html" class="text-white text-4xl font-bold hover:text-[#ffb800]">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- FIXED BOTTOM ACTION BAR (Mobile Only) -->
+    <div class="fixed bottom-0 left-0 w-full bg-black/95 border-t border-white/5 p-4 flex gap-4 z-[1500] md:hidden">
+        <a href="#" class="flex-1 bg-white text-black font-black py-4 rounded-xl text-center text-lg">Register</a>
+        <a href="#" class="flex-1 bg-[#ffb800] text-black font-black py-4 rounded-xl text-center text-lg">Login</a>
+        
+        <!-- Floating Chat Icon -->
+        <div class="absolute right-6 -top-6 bg-[#ffb800] text-black w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl">
+            <i class="fa-solid fa-comment text-2xl"></i>
+        </div>
+    </div>
+
+    <!-- Simple Script to Handle the Hamburger -->
+    <script>
+        const burger = document.querySelector('.hamburger-menu');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const closeBtn = document.getElementById('close-menu');
+
+        burger.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+    
 </nav>
 
 
