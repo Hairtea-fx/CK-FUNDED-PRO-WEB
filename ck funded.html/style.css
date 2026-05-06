@@ -2092,36 +2092,3 @@ label {
     gap: 1rem; /* Adds space between the bar and other elements */
 }
 
-/* 1. Desktop Styles (Default) */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.hamburger-menu {
-    display: none; /* Hide the menu icon on desktop */
-}
-
-/* 2. Mobile Styles (Media Query) */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide the long list of links on mobile */
-    }
-
-    .hamburger-menu {
-        display: block; /* Show the 3-line menu icon instead */
-        cursor: pointer;
-    }
-    
-    /* Optional: Style for a vertical mobile menu */
-    .mobile-menu-active .nav-links {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #000;
-        padding: 20px;
-    }
-}
