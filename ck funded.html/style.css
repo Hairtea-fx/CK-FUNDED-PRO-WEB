@@ -2348,3 +2348,29 @@ label {
         font-size: clamp(1.5rem, 5vw, 2.5rem);
     }
 }
+
+/* Show the overlay when active */
+#mobile-nav-overlay.open {
+    transform: translateY(0);
+}
+
+/* Hide the main desktop menu and actions on small screens */
+@media (max-width: 768px) {
+    .nav-menu, .nav-actions {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: block; /* Ensure your hamburger is visible */
+        z-index: 102;
+    }
+    
+    body.menu-open {
+        overflow: hidden; /* Prevents background scrolling when menu is open */
+    }
+}
+
+/* Ensure the action bar stays at the very bottom */
+.mobile-action-bar {
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+}
