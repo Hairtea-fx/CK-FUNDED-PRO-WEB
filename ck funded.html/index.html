@@ -49,24 +49,28 @@
         <a href="#" class="btn-cta">Get Started</a>
     </div>
 
-    <!-- Mobile Navigation Overlay (Hidden by default) -->
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0a0a0a] z-[1000] flex flex-col p-8 pt-24">
-        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-3xl">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        
-        <ul class="space-y-8">
-            <li><a href="./index.html" class="text-white text-2xl font-medium">Home</a></li>
-            <li><a href="./challenge.html" class="text-white text-2xl font-medium">Challenges</a></li>
-            <li><a href="./about.html" class="text-white text-2xl font-medium">About Us</a></li>
-            <li><a href="./blog.html" class="text-white text-2xl font-medium">Blogs</a></li>
-            <li><a href="./affiliate.html" class="text-white text-2xl font-medium">Affiliate Program</a></li>
-            <li><a href="./faq.html" class="text-white text-2xl font-medium">FAQ</a></li>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./challenge.html">Challenges</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
+            <li><a href="./affiliate.html">Affiliate Program</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./careers.html">Careers</a></li>
+            <li><a href="./awards.html">Awards</a></li>
+            <li><a href="./investors.html">Investors</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </div>
 
-
-
+    <!-- Mobile Bottom Action Bar -->
+    <div class="mobile-action-bar">
+        <button class="btn-mobile-register">Register</button>
+        <button class="btn-mobile-login">Login</button>
+    </div>
 </nav>
 
 
@@ -160,16 +164,52 @@
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.querySelector('.navbar-top');
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const mobileActionBar = document.querySelector('.mobile-action-bar');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
+        const body = document.body;
 
-        if (!navbar || !hamburger || !navMenu) return;
-
-        hamburger.addEventListener('click', function () {
-            const isOpen = navbar.classList.toggle('mobile-open');
-            hamburger.setAttribute('aria-expanded', String(isOpen));
+        // Toggle mobile menu when hamburger is clicked
+        hamburgerBtn.addEventListener('click', function () {
+            const isActive = mobileNavOverlay.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+            body.style.overflow = isActive ? 'hidden' : 'auto';
         });
+
+        // Close menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mobileNavOverlay.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking outside the overlay (on the background)
+        mobileNavOverlay.addEventListener('click', function (e) {
+            if (e.target === mobileNavOverlay) {
+                mobileNavOverlay.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // Add button click handlers
+        const registerBtn = document.querySelector('.btn-mobile-register');
+        const loginBtn = document.querySelector('.btn-mobile-login');
+
+        if (registerBtn) {
+            registerBtn.addEventListener('click', function () {
+                window.location.href = '#register'; // Update with your register URL
+            });
+        }
+
+        if (loginBtn) {
+            loginBtn.addEventListener('click', function () {
+                window.location.href = '#login'; // Update with your login URL
+            });
+        }
     });
 </script>
 
