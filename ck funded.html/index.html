@@ -55,13 +55,13 @@
             <li><a href="./index.html">Home</a></li>
             <li><a href="./challenge.html">Challenges</a></li>
             <li><a href="./about.html">About Us</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
+            <li><a href="./affiliate.html">Affiliate Program</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
             <li><a href="./dashboard.html">Dashboard</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./affiliate.html">Affiliate</a></li>
             <li><a href="./careers.html">Careers</a></li>
             <li><a href="./awards.html">Awards</a></li>
             <li><a href="./investors.html">Investors</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
             <li><a href="./contact.html">Contact</a></li>
         </ul>
     </div>
@@ -151,31 +151,6 @@
 
     </div> 
    </section>
-
-    <script>
-    window.addEventListener('scroll', function() {
-        const brand = document.querySelector('.fade-out-element');
-        if (!brand) return;
-        if (window.scrollY > 50) {
-            brand.classList.add('scrolled');
-        } else {
-            brand.classList.remove('scrolled');
-        }
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.querySelector('.navbar-top');
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (!navbar || !hamburger || !navMenu) return;
-
-        hamburger.addEventListener('click', function () {
-            const isOpen = navbar.classList.toggle('mobile-open');
-            hamburger.setAttribute('aria-expanded', String(isOpen));
-        });
-    });
-</script>
 
 <div class="section-divider"></div>
 
