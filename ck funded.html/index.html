@@ -24,7 +24,7 @@
         <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
     </div>
 
-    <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
+    <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -47,6 +47,29 @@
     <div class="nav-actions">
         <a href="#" class="btn-login">Login</a>
         <a href="#" class="btn-cta">Get Started</a>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./challenge.html">Challenges</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./affiliate.html">Affiliate</a></li>
+            <li><a href="./careers.html">Careers</a></li>
+            <li><a href="./awards.html">Awards</a></li>
+            <li><a href="./investors.html">Investors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Mobile Bottom Action Bar -->
+    <div class="mobile-action-bar">
+        <button class="btn-mobile-register">Register</button>
+        <button class="btn-mobile-login">Login</button>
     </div>
 </nav>
 
@@ -1261,6 +1284,68 @@ s0.parentNode.insertBefore(s1,s0);
             // Optional: Connect this to your Tawk_API.sendMessage() if using a real bot
         }
     }
+</script>
+
+<!-- Mobile Navigation Menu Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const mobileActionBar = document.querySelector('.mobile-action-bar');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
+        const body = document.body;
+
+        // Toggle mobile menu when hamburger is clicked
+        hamburgerBtn.addEventListener('click', function () {
+            const isActive = mobileNavOverlay.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+            
+            // Hide action bar when menu is open, show when closed
+            if (isActive) {
+                body.style.overflow = 'hidden';
+                if (mobileActionBar) mobileActionBar.style.display = 'none';
+            } else {
+                body.style.overflow = 'auto';
+                if (mobileActionBar) mobileActionBar.style.display = 'flex';
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mobileNavOverlay.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                body.style.overflow = 'auto';
+                if (mobileActionBar) mobileActionBar.style.display = 'flex';
+            });
+        });
+
+        // Close menu when clicking outside the overlay (on the background)
+        mobileNavOverlay.addEventListener('click', function (e) {
+            if (e.target === mobileNavOverlay) {
+                mobileNavOverlay.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                body.style.overflow = 'auto';
+                if (mobileActionBar) mobileActionBar.style.display = 'flex';
+            }
+        });
+
+        // Add button click handlers
+        const registerBtn = document.querySelector('.btn-mobile-register');
+        const loginBtn = document.querySelector('.btn-mobile-login');
+
+        if (registerBtn) {
+            registerBtn.addEventListener('click', function () {
+                window.location.href = '#register'; // Update with your register URL
+            });
+        }
+
+        if (loginBtn) {
+            loginBtn.addEventListener('click', function () {
+                window.location.href = '#login'; // Update with your login URL
+            });
+        }
+    });
 </script>
 
 </body>
