@@ -49,41 +49,29 @@
         <a href="#" class="btn-cta">Get Started</a>
     </div>
 
-    <!-- Mobile Navigation Overlay Container -->
-<nav class="relative z-[100]">
-    <!-- The Overlay: Added flex and flex-col to manage the layout -->
-    <div class="mobile-nav-overlay fixed inset-0 bg-black flex flex-col transition-transform translate-x-full duration-300" id="mobile-nav-overlay">
-        
-        <!-- Top Header inside the menu -->
-        <div class="flex justify-between items-center p-6 border-b border-white/5">
-            <div class="text-white font-black italic tracking-tighter">CK FUNDED PRO</div>
-            <button onclick="toggleMobileMenu()" class="text-white text-3xl">&times;</button>
-        </div>
-
-        <!-- 1. The Menu List: added 'flex-1' and 'overflow-y-auto' -->
-        <ul class="mobile-nav-menu flex-1 overflow-y-auto p-8 space-y-8">
-            <li><a href="./index.html" class="text-white text-2xl font-bold tracking-tight block">Home</a></li>
-            <li><a href="./challenge.html" class="text-white text-2xl font-bold tracking-tight block">Challenges</a></li>
-            <li><a href="./about.html" class="text-white text-2xl font-bold tracking-tight block">About Us</a></li>
-            <li><a href="./blog.html" class="text-white text-2xl font-bold tracking-tight block">Blogs</a></li>
-            <li><a href="./affiliate.html" class="text-white text-2xl font-bold tracking-tight block">Affiliate Program</a></li>
-            <li><a href="./faq.html" class="text-white text-2xl font-bold tracking-tight block">FAQ</a></li>
-            <li><a href="./dashboard.html" class="text-white text-2xl font-bold tracking-tight block">Dashboard</a></li>
-            <li><a href="./contact.html" class="text-white text-2xl font-bold tracking-tight block">Contact</a></li>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./challenge.html">Challenges</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./affiliate.html">Affiliate</a></li>
+            <li><a href="./careers.html">Careers</a></li>
+            <li><a href="./awards.html">Awards</a></li>
+            <li><a href="./investors.html">Investors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
+    </div>
 
-        <!-- 2. The Action Bar: Moved INSIDE the overlay with 'mt-auto' -->
-        <div class="mobile-action-bar mt-auto p-6 flex gap-4 bg-black">
-            <button class="flex-1 bg-white text-black font-black py-4 rounded-xl text-center uppercase tracking-tighter transition-transform active:scale-95">
-                Register
-            </button>
-            <button class="flex-1 bg-[#ffb800] text-black font-black py-4 rounded-xl text-center uppercase tracking-tighter transition-transform active:scale-95">
-                Login
-            </button>
-        </div>
+    <!-- Mobile Bottom Action Bar -->
+    <div class="mobile-action-bar">
+        <button class="btn-mobile-register">Register</button>
+        <button class="btn-mobile-login">Login</button>
     </div>
 </nav>
-
 
 
     <header id="Home" class="hero">
@@ -163,6 +151,31 @@
 
     </div> 
    </section>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const brand = document.querySelector('.fade-out-element');
+        if (!brand) return;
+        if (window.scrollY > 50) {
+            brand.classList.add('scrolled');
+        } else {
+            brand.classList.remove('scrolled');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.querySelector('.navbar-top');
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (!navbar || !hamburger || !navMenu) return;
+
+        hamburger.addEventListener('click', function () {
+            const isOpen = navbar.classList.toggle('mobile-open');
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+    });
+</script>
 
 <div class="section-divider"></div>
 
@@ -1271,60 +1284,6 @@ s0.parentNode.insertBefore(s1,s0);
             // Optional: Connect this to your Tawk_API.sendMessage() if using a real bot
         }
     }
-</script>
-
-<!-- Mobile Navigation Menu Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-        const mobileActionBar = document.querySelector('.mobile-action-bar');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
-        const body = document.body;
-
-        // Toggle mobile menu when hamburger is clicked
-        hamburgerBtn.addEventListener('click', function () {
-            const isActive = mobileNavOverlay.classList.toggle('active');
-            hamburgerBtn.classList.toggle('active');
-            body.style.overflow = isActive ? 'hidden' : 'auto';
-        });
-
-        // Close menu when a link is clicked
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                mobileNavOverlay.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-                body.style.overflow = 'auto';
-                if (mobileActionBar) mobileActionBar.style.display = 'flex';
-            });
-        });
-
-        // Close menu when clicking outside the overlay (on the background)
-        mobileNavOverlay.addEventListener('click', function (e) {
-            if (e.target === mobileNavOverlay) {
-                mobileNavOverlay.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-                body.style.overflow = 'auto';
-                if (mobileActionBar) mobileActionBar.style.display = 'flex';
-            }
-        });
-
-        // Add button click handlers
-        const registerBtn = document.querySelector('.btn-mobile-register');
-        const loginBtn = document.querySelector('.btn-mobile-login');
-
-        if (registerBtn) {
-            registerBtn.addEventListener('click', function () {
-                window.location.href = '#register'; // Update with your register URL
-            });
-        }
-
-        if (loginBtn) {
-            loginBtn.addEventListener('click', function () {
-                window.location.href = '#login'; // Update with your login URL
-            });
-        }
-    });
 </script>
 
 </body>
