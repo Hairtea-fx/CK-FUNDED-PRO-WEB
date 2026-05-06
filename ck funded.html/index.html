@@ -3,29 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | CK Funded Pro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-[#050505] text-white font-sans">
-
-    <nav class="p-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-[#050505]/80">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html"><img src="logo.png" alt="Logo" class="h-8"></a>
-            <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
-                <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
-                <a href="about.html" class="text-[#ffb800]">About</a>
-                <a href="challenge.html" class="text-gray-400 hover:text-white transition-colors">Challenge</a>
-                <a href="dashboard.html" class="text-gray-400 hover:text-white transition-colors">Dashboard</a>
-            </div>
-            <a href="challenge.html" class="bg-[#ffb800] text-black px-6 py-2 rounded-full font-black text-xs uppercase hover:scale-105 transition-transform">Get Funded</a>
-        </div>
-    </nav><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK Funded Pro | The Future of Prop Trading</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
@@ -47,7 +24,7 @@
     </div>
 
     <ul class="nav-menu">
-        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./index.html" class="">Home</a></li>
         <li><a href="./challenge.html" class="hover:text-[#ffb800] transition-colors">Challenge</a></li>
         <li><a href="./dashboard.html" class="hover:text-[#ffb800] transition-colors">Dashboard</a></li>
         <li><a href="./about.html" class="hover:text-[#ffb800] transition-colors">About</a></li>
@@ -145,30 +122,7 @@
     </div> 
    </section>
 
-    <script>
-    window.addEventListener('scroll', function() {
-        const brand = document.querySelector('.fade-out-element');
-        if (!brand) return;
-        if (window.scrollY > 50) {
-            brand.classList.add('scrolled');
-        } else {
-            brand.classList.remove('scrolled');
-        }
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.querySelector('.navbar-top');
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (!navbar || !hamburger || !navMenu) return;
-
-        hamburger.addEventListener('click', function () {
-            const isOpen = navbar.classList.toggle('mobile-open');
-            hamburger.setAttribute('aria-expanded', String(isOpen));
-        });
-    });
-</script>
+    
 
 <div class="section-divider"></div>
 
