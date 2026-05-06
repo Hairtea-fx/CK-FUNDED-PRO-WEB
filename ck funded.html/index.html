@@ -49,22 +49,22 @@
         <a href="#" class="btn-cta">Get Started</a>
     </div>
 
-    <!-- Mobile Navigation Overlay -->
-<div id="mobile-nav-overlay" class="fixed inset-0 bg-[#0a0a0a] z-[9999] flex flex-col transform transition-transform duration-300 -translate-y-full overflow-y-auto">
-    <!-- Close Button for Overlay -->
-    <div class="flex justify-end p-6">
-        <button id="close-menu" class="text-white text-3xl">&times;</button>
-    </div>
-    
-    <ul class="flex flex-col px-8 pb-32 space-y-6">
-        <li><a href="./index.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">Home</a></li>
-        <li><a href="./challenge.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">Challenges</a></li>
-        <li><a href="./about.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">About Us</a></li>
-        <li><a href="./dashboard.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">Dashboard</a></li>
-        <li><a href="./blog.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">Blog</a></li>
-        <li><a href="./affiliate.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">Affiliate</a></li>
-        <li><a href="./contact.html" class="text-white text-2xl font-bold border-b border-white/10 pb-4 block">Contact</a></li>
+    <!-- Mobile Navigation Overlay (Hidden by default) -->
+<div id="mobile-nav-overlay" class="fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-[#0a0a0a] z-[999] transition-all duration-300 transform -translate-x-full overflow-y-auto pb-32">
+    <ul class="flex flex-col p-6 space-y-6">
+        <li><a href="./index.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Home</a></li>
+        <li><a href="./challenge.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Challenges</a></li>
+        <li><a href="./about.html" class="text-white text-lg font-medium hover:text-[#ffb800]">About Us</a></li>
+        <li><a href="./blog.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Blogs</a></li>
+        <li><a href="./affiliate.html" class="text-white text-lg font-medium hover:text-[#ffb800]">Affiliate Program</a></li>
+        <li><a href="./faq.html" class="text-white text-lg font-medium hover:text-[#ffb800]">FAQ</a></li>
     </ul>
+</div>
+
+<!-- Mobile Bottom Action Bar (Fixed to Bottom) -->
+<div class="fixed bottom-0 left-0 w-full bg-[#0a0a0a] p-4 flex gap-4 z-[1000] md:hidden border-t border-white/5">
+    <a href="#" class="flex-1 bg-white text-black font-bold py-3 rounded-lg text-center">Register</a>
+    <a href="#" class="flex-1 bg-[#ffb800] text-black font-bold py-3 rounded-lg text-center">Login</a>
 </div>
 
 
