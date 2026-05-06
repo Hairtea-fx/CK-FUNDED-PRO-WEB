@@ -49,29 +49,66 @@
         <a href="#" class="btn-cta">Get Started</a>
     </div>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
-        <ul class="mobile-nav-menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./challenge.html">Challenges</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./blog.html">Blogs</a></li>
-            <li><a href="./affiliate.html">Affiliate Program</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="./dashboard.html">Dashboard</a></li>
-            <li><a href="./careers.html">Careers</a></li>
-            <li><a href="./awards.html">Awards</a></li>
-            <li><a href="./investors.html">Investors</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </div>
+    <!-- Mobile Navigation Overlay Container -->
+<nav class="relative z-[100]">
+    <!-- The Overlay: Added flex and flex-col to manage the layout -->
+    <div class="mobile-nav-overlay fixed inset-0 bg-black flex flex-col transition-transform translate-x-full duration-300" id="mobile-nav-overlay">
+        
+        <!-- Top Header inside the menu -->
+        <div class="flex justify-between items-center p-6 border-b border-white/5">
+            <div class="text-white font-black italic tracking-tighter">CK FUNDED PRO</div>
+            <button onclick="toggleMobileMenu()" class="text-white text-3xl">&times;</button>
+        </div>
 
-    <!-- Mobile Bottom Action Bar -->
-    <div class="mobile-action-bar">
-        <button class="btn-mobile-register">Register</button>
-        <button class="btn-mobile-login">Login</button>
+        <!-- 1. The Menu List: added 'flex-1' and 'overflow-y-auto' -->
+        <ul class="mobile-nav-menu flex-1 overflow-y-auto p-8 space-y-8">
+            <li><a href="./index.html" class="text-white text-2xl font-bold tracking-tight block">Home</a></li>
+            <li><a href="./challenge.html" class="text-white text-2xl font-bold tracking-tight block">Challenges</a></li>
+            <li><a href="./about.html" class="text-white text-2xl font-bold tracking-tight block">About Us</a></li>
+            <li><a href="./blog.html" class="text-white text-2xl font-bold tracking-tight block">Blogs</a></li>
+            <li><a href="./affiliate.html" class="text-white text-2xl font-bold tracking-tight block">Affiliate Program</a></li>
+            <li><a href="./faq.html" class="text-white text-2xl font-bold tracking-tight block">FAQ</a></li>
+            <li><a href="./dashboard.html" class="text-white text-2xl font-bold tracking-tight block">Dashboard</a></li>
+            <li><a href="./contact.html" class="text-white text-2xl font-bold tracking-tight block">Contact</a></li>
+        </ul>
+
+        <!-- 2. The Action Bar: Moved INSIDE the overlay with 'mt-auto' -->
+        <div class="mobile-action-bar mt-auto p-6 flex gap-4 bg-black">
+            <button class="flex-1 bg-white text-black font-black py-4 rounded-xl text-center uppercase tracking-tighter transition-transform active:scale-95">
+                Register
+            </button>
+            <button class="flex-1 bg-[#ffb800] text-black font-black py-4 rounded-xl text-center uppercase tracking-tighter transition-transform active:scale-95">
+                Login
+            </button>
+        </div>
     </div>
 </nav>
+
+<!-- JavaScript Toggle Logic -->
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-nav-overlay');
+        // This slides the menu in from the right
+        menu.classList.toggle('translate-x-full');
+    }
+</script>
+
+<!-- Add this specific CSS if not already in your style.css -->
+<style>
+    .mobile-nav-overlay {
+        /* Ensuring the overlay takes up the full viewport height */
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .mobile-nav-menu li a {
+        transition: color 0.3s ease;
+    }
+    
+    .mobile-nav-menu li a:hover {
+        color: #ffb800;
+    }
+</style>
 
 
     <header id="Home" class="hero">
