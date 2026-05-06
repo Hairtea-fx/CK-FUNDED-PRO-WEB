@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK Funded Pro | The Future of Prop Trading</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
@@ -17,28 +18,71 @@
         <div class="overlay-gradient"></div>
     </div>
 
-    <nav class="navbar-top">
-    <div class="brand-container stacked-logo logo-animate">
-        <img src="logo.jpeg" alt="CK" class="brand-logo">
-        <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
+    <nav class="bg-black text-white px-4 py-3">
+    <div class="flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <img src="logo.jpeg" alt="CK" class="w-10 h-10">
+            <div class="font-bold text-lg">
+                CK FUNDED <span class="text-yellow-400">PRO</span>
+            </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 text-sm">
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./challenge.html" class="hover:text-yellow-400">Challenge</a></li>
+            <li><a href="./dashboard.html" class="hover:text-yellow-400">Dashboard</a></li>
+            <li><a href="./about.html" class="hover:text-yellow-400">About</a></li>
+            <li><a href="./blog.html" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="./affiliate.html" class="hover:text-yellow-400">Affiliate</a></li>
+            <li><a href="./careers.html" class="hover:text-yellow-400">Careers</a></li>
+            <li><a href="./awards.html" class="hover:text-yellow-400">Awards</a></li>
+            <li><a href="./investors.html" class="hover:text-yellow-400">Investors</a></li>
+            <li><a href="./faq.html" class="hover:text-yellow-400">FAQ</a></li>
+            <li><a href="./contact.html" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex gap-3">
+            <a href="#" class="border px-3 py-1 rounded">Login</a>
+            <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded">Get Started</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden text-2xl">
+            ☰
+        </button>
     </div>
 
-    <ul class="nav-menu">
-        <li><a href="./index.html" class="">Home</a></li>
-        <li><a href="./challenge.html" class="hover:text-[#ffb800] transition-colors">Challenge</a></li>
-        <li><a href="./dashboard.html" class="hover:text-[#ffb800] transition-colors">Dashboard</a></li>
-        <li><a href="./about.html" class="hover:text-[#ffb800] transition-colors">About</a></li>
-        <li><a href="./blog.html" class="hover:text-[#ffb800] transition-colors">Blog</a></li>
-        <li><a href="./affiliate.html" class="hover:text-[#ffb800] transition-colors">Affiliate</a></li>
-        <li><a href="./careers.html" class="hover:text-[#ffb800] transition-colors">Careers</a></li>
-        <li><a href="./awards.html" class="hover:text-[#ffb800] transition-colors">Awards</a></li>
-        <li><a href="./investors.html" class="hover:text-[#ffb800] transition-colors">Investors</a></li>
-        <li><a href="./faq.html" class="hover:text-[#ffb800] transition-colors">FAQ</a></li>
-        <li><a href="./contact.html" class="hover:text-[#ffb800] transition-colors">Contact</a></li>
-    </ul>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col mt-4 space-y-3 md:hidden">
+        <a href="./index.html">Home</a>
+        <a href="./challenge.html">Challenge</a>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./about.html">About</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./affiliate.html">Affiliate</a>
+        <a href="./careers.html">Careers</a>
+        <a href="./awards.html">Awards</a>
+        <a href="./investors.html">Investors</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./contact.html">Contact</a>
 
-    <div class="nav-actions">
-        <a href="#" class="btn-login">Login</a>
-        <a href="#" class="btn-cta">Get Started</a>
+        <div class="flex gap-3 pt-3">
+            <a href="#" class="border px-3 py-1 rounded w-full text-center">Login</a>
+            <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded w-full text-center">Get Started</a>
+        </div>
     </div>
 </nav>
+
+<!-- JavaScript -->
+<script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
