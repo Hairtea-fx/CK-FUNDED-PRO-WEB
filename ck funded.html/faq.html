@@ -1,5 +1,6 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="video-bg-container">
@@ -18,31 +20,89 @@
         <div class="overlay-gradient"></div>
     </div>
 
-    <nav class="navbar-top">
-    <div class="brand-container stacked-logo logo-animate">
-        <img src="logo.jpeg" alt="CK" class="brand-logo">
-        <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
+    <nav class="navbar-top px-6 py-4 flex justify-between items-center">
+        <div class="brand-container stacked-logo logo-animate">
+            <img src="logo.jpeg" alt="CK" class="brand-logo">
+            <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 text-sm">
+            <li><a href="./index.html" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="./challenge.html" class="hover:text-yellow-400">Challenge</a></li>
+            <li><a href="./dashboard.html" class="hover:text-yellow-400">Dashboard</a></li>
+            <li><a href="./about.html" class="hover:text-yellow-400">About</a></li>
+            <li><a href="./blog.html" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="./affiliate.html" class="hover:text-yellow-400">Affiliate</a></li>
+            <li><a href="./careers.html" class="hover:text-yellow-400">Careers</a></li>
+            <li><a href="./awards.html" class="hover:text-yellow-400">Awards</a></li>
+            <li><a href="./investors.html" class="hover:text-yellow-400">Investors</a></li>
+            <li><a href="./faq.html" class="active">FAQ</a></li>
+            <li><a href="./contact.html" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+
+        <div class="hidden md:flex gap-3">
+            <a href="#" class="border px-3 py-1 rounded hover:bg-white hover:text-black transition">Login</a>
+            <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded font-bold hover:bg-yellow-500 transition">Get
+                Started</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none z-[1001]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[1000] flex flex-col items-center justify-center space-y-6 text-xl transition-all duration-300 transform translate-x-full opacity-0 pointer-events-none">
+        <button id="close-menu" class="absolute top-8 right-8 text-white text-4xl focus:outline-none">&times;</button>
+        <a href="./index.html" class="text-yellow-400 font-bold">Home</a>
+        <a href="./challenge.html" class="text-white hover:text-yellow-400">Challenge</a>
+        <a href="./dashboard.html" class="text-white hover:text-yellow-400">Dashboard</a>
+        <a href="./about.html" class="text-white hover:text-yellow-400">About</a>
+        <a href="./blog.html" class="text-white hover:text-yellow-400">Blog</a>
+        <a href="./affiliate.html" class="text-white hover:text-yellow-400">Affiliate</a>
+        <a href="./careers.html" class="text-white hover:text-yellow-400">Careers</a>
+        <a href="./awards.html" class="text-white hover:text-yellow-400">Awards</a>
+        <a href="./investors.html" class="text-white hover:text-yellow-400">Investors</a>
+        <a href="./faq.html" class="text-white hover:text-yellow-400">FAQ</a>
+        <a href="./contact.html" class="text-white hover:text-yellow-400">Contact</a>
+        <div class="flex flex-col gap-4 w-full px-12 pt-6">
+            <a href="#" class="text-center border border-white/20 py-3 rounded-xl text-white">Login</a>
+            <a href="#" class="text-center bg-yellow-400 text-black py-3 rounded-xl font-bold">Get Started</a>
+        </div>
     </div>
 
-    <ul class="nav-menu">
-        <li><a href="./index.html" class="hover:text-[#ffb800] transition-colors">Home</a></li>
-        <li><a href="./challenge.html" class="hover:text-[#ffb800] transition-colors">Challenge</a></li>
-        <li><a href="./dashboard.html" class="hover:text-[#ffb800] transition-colors">Dashboard</a></li>
-        <li><a href="./about.html" class="hover:text-[#ffb800] transition-colors">About</a></li>
-        <li><a href="./blog.html" class="hover:text-[#ffb800] transition-colors">Blog</a></li>
-        <li><a href="./affiliate.html" class="hover:text-[#ffb800] transition-colors">Affiliate</a></li>
-        <li><a href="./careers.html" class="hover:text-[#ffb800] transition-colors">Careers</a></li>
-        <li><a href="./awards.html" class="hover:text-[#ffb800] transition-colors">Awards</a></li>
-        <li><a href="./investors.html" class="hover:text-[#ffb800] transition-colors">Investors</a></li>
-        <li><a href="./faq.html" class="active">FAQ</a></li>
-        <li><a href="./contact.html" class="hover:text-[#ffb800] transition-colors">Contact</a></li>
-    </ul>
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeMenu = document.getElementById("close-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-    <div class="nav-actions">
-        <a href="#" class="btn-login">Login</a>
-        <a href="#" class="btn-cta">Get Started</a>
-    </div>
-</nav>
+        const toggleMenu = (isOpen) => {
+            if (isOpen) {
+                mobileMenu.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
+                mobileMenu.classList.add("translate-x-0", "opacity-100");
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add("translate-x-full", "opacity-0", "pointer-events-none");
+                mobileMenu.classList.remove("translate-x-0", "opacity-100");
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        menuBtn.addEventListener("click", () => toggleMenu(true));
+        closeMenu.addEventListener("click", () => toggleMenu(false));
+
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+    </script>
+
 
     <!-- Pipstone Help Center Section -->
 <section class="help-center">
