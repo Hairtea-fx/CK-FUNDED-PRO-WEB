@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Login | CK Funded Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] min-h-screen flex overflow-hidden">
+
+    <div class="hidden lg:flex lg:w-1/3 relative overflow-hidden border-r border-white/10">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="ck-bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-[#ffb800]/80 mix-blend-multiply z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
+
+        <div class="relative z-30 flex flex-col justify-center items-center w-full p-12 text-white">
+            <img src="logo.jpeg" alt="Logo" class="h-16 mb-6 rounded-xl shadow-2xl">
+            <h2 class="text-3xl font-black italic uppercase tracking-tighter text-center">
+                Expanding the Frontier of<br><span class="text-black">Institutional Capital Access</span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="w-full lg:w-2/3 flex flex-col justify-center items-center px-8 lg:px-24">
+        
+        <div class="w-full max-w-md">
+            <div class="lg:hidden flex justify-center mb-8">
+                <img src="logo.jpeg" alt="Logo" class="h-12 rounded-lg">
+            </div>
+
+            <div class="mb-10 text-center lg:text-left">
+                <h1 class="text-white text-3xl font-bold mb-2">Welcome to the Affiliate Portal!</h1>
+                <p class="text-gray-400">Use your credentials to access your affiliate account. Monitor your performance metrics and conversion analytics.</p>
+            </div>
+
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-gray-400 text-sm mb-2">Email address</label>
+                    <input type="email" placeholder="affiliate@example.com" 
+                        class="w-full bg-[#111111] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#ffb800] transition-colors">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-gray-400 text-sm">Password</label>
+                        <a href="#" class="text-[#ffb800] text-xs hover:underline">Forgot password?</a>
+                    </div>
+                    <div class="relative">
+                        <input type="password" placeholder="••••••••" 
+                            class="w-full bg-[#111111] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#ffb800] transition-colors">
+                        <button type="button" class="absolute right-4 top-3.5 text-gray-500">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" 
+                    class="w-full bg-[#ffb800] text-black font-bold py-3 rounded-lg hover:bg-[#e6a600] transition-all transform active:scale-95">
+                    Sign in
+                </button>
+            </form>
+
+            <p class="mt-10 text-center text-gray-400 text-sm">
+                Don't have an account? <a href="Become an affiliate.html" class="text-[#ffb800] font-semibold hover:underline">Register now</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

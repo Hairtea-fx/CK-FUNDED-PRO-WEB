@@ -10,6 +10,7 @@
 html {
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -1708,7 +1709,6 @@ label {
         flex-direction: column;
         gap: 0.75rem;
         margin: 1rem auto 5rem auto;
-        padding-right: 0;
         width: min(100%, 320px);
         align-items: center;
         text-align: center;
@@ -2017,8 +2017,7 @@ label {
 
     .trustpilot-bar {
         gap: 0.5rem;
-        margin: 0.75rem 0 5rem 0;
-        padding-right: 70px;
+        margin: 0.75rem auto 5rem auto;
     }
 
     .tp-text, .tp-brand {
@@ -2151,4 +2150,26 @@ label {
         border-radius: 8px;
         font-weight: bold;
     }
+}
+
+.chat-window {
+    /* ... keep your other code ... */
+    z-index: 10000 !important; /* This forces it to the top layer */
+}
+
+/* Add this to ensure the Trustpilot bar doesn't fight for the top layer */
+.trustpilot-bar {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure Font Awesome Brands are visible */
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    display: inline-block !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
 }
