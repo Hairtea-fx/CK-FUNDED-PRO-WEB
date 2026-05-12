@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | CK Funded Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 1. Perfect Video Background Centering */
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.6) contrast(1.1);
+        }
+
+        /* 2. Fixes the "blown out" color look from your screenshot */
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        /* 3. High-End Glassmorphism */
+        .glass-card {
+            background: rgba(15, 15, 15, 0.75);
+            backdrop-filter: blur(20px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom scrollbar for a pro feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #eab308; border-radius: 10px; }
+    </style>
+</head>
+<body class="text-white font-sans selection:bg-yellow-500 selection:text-black">
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="ck-bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="min-h-screen flex items-center justify-center p-6">
+        <div class="glass-card w-full max-w-2xl p-10 rounded-[2.5rem] relative overflow-hidden">
+            
+            <div id="formContainer">
+                <nav class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
+                    Job Openings <span class="mx-2 text-yellow-500">/</span> Apply
+                </nav>
+
+                <h1 class="text-4xl font-black mb-2 text-white italic">APPLICATION FORM</h1>
+                <p class="text-gray-400 mb-10 text-sm">Senior Internal Auditor Operations</p>
+
+                <form id="applicationForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Full Name *</label>
+                            <input type="text" placeholder="John Doe" required 
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500 focus:bg-white/10 transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email Address *</label>
+                            <input type="email" placeholder="john@example.com" required 
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500 focus:bg-white/10 transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Phone Number *</label>
+                        <input type="tel" placeholder="+234..." required 
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500 focus:bg-white/10 transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Cover Letter</label>
+                        <textarea rows="4" placeholder="Briefly explain your experience in Internal Auditing..." 
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500 focus:bg-white/10 transition-all"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Resume / CV *</label>
+                        <div class="flex items-center space-x-4">
+                            <input type="file" id="resume" class="hidden" required>
+                            <label for="resume" class="cursor-pointer bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-500 border border-yellow-500/30 px-6 py-2 rounded-lg transition-all text-sm font-bold">
+                                CHOOSE FILE
+                            </label>
+                            <span id="fileName" class="text-gray-500 text-xs">No file selected</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-3 py-2">
+                        <input type="checkbox" required class="accent-yellow-500 w-4 h-4 cursor-pointer">
+                        <span class="text-xs text-gray-400">I agree to the <a href="#" class="text-yellow-500 underline">Terms</a> and <a href="#" class="text-yellow-500 underline">Privacy Policy</a></span>
+                    </div>
+
+                    <button type="submit" id="submitBtn"
+                        class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-black uppercase tracking-tighter py-4 rounded-xl shadow-lg shadow-yellow-500/20 transition-all transform active:scale-95">
+                        SUBMIT APPLICATION
+                    </button>
+                </form>
+            </div>
+
+            <div id="successMessage" class="hidden flex flex-col items-center text-center py-10">
+                <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
+                    <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-black italic mb-4">APPLICATION SENT</h2>
+                <p class="text-gray-400 max-w-sm mb-8">Your details have been securely transmitted to the CK Funded Operations team. We will review your profile shortly.</p>
+                <a href="index.html" class="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-sm font-bold transition-all">
+                    RETURN TO HOME
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('applicationForm');
+        const formContainer = document.getElementById('formContainer');
+        const successMessage = document.getElementById('successMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        const fileInput = document.getElementById('resume');
+        const fileNameDisplay = document.getElementById('fileName');
+
+        // Update file name display
+        fileInput.addEventListener('change', (e) => {
+            fileNameDisplay.innerText = e.target.files[0] ? e.target.files[0].name : "No file selected";
+        });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // SRE Perspective: Add loading state
+            submitBtn.innerText = "UPLOADING DATA...";
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = "0.5";
+
+            // Simulate server response time
+            setTimeout(() => {
+                formContainer.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                
+                // Log for local debugging
+                console.log("Full Stack Status: Form processed successfully.");
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>

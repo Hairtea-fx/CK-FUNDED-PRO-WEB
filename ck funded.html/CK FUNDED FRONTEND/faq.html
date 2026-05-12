@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CK Funded Pro | The Future of Prop Trading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="video-bg-container">
+        <video autoplay muted loop playsinline>
+            <source src="ck-bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-gradient"></div>
+    </div>
+
+    <nav class="navbar-top px-6 py-4 flex justify-between items-center">
+        <div class="brand-container stacked-logo logo-animate">
+            <img src="logo.jpeg" alt="CK" class="brand-logo">
+            <div class="logo-text">CK FUNDED <span class="accent">PRO</span></div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 text-sm">
+            <li><a href="./index.html" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="./challenge.html" class="hover:text-yellow-400">Challenge</a></li>
+            <li><a href="./dashboard.html" class="hover:text-yellow-400">Dashboard</a></li>
+            <li><a href="./about.html" class="hover:text-yellow-400">About</a></li>
+            <li><a href="./blog.html" class="hover:text-yellow-400">Blog</a></li>
+            <li><a href="./affiliate.html" class="hover:text-yellow-400">Affiliate</a></li>
+            <li><a href="./careers.html" class="hover:text-yellow-400">Careers</a></li>
+            <li><a href="./awards.html" class="hover:text-yellow-400">Awards</a></li>
+            <li><a href="./investors.html" class="hover:text-yellow-400">Investors</a></li>
+            <li><a href="./faq.html" class="active">FAQ</a></li>
+            <li><a href="./contact.html" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+
+        <div class="hidden md:flex gap-3">
+            <a href="login.html" class="border px-3 py-1 rounded hover:bg-white hover:text-black transition">Login</a>
+            <a href="Get Started.html" class="bg-yellow-400 text-black px-3 py-1 rounded font-bold hover:bg-yellow-500 transition">Get
+                Started</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none z-[1001]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[1000] flex flex-col items-center justify-center space-y-6 text-xl transition-all duration-300 transform translate-x-full opacity-0 pointer-events-none">
+        <button id="close-menu" class="absolute top-8 right-8 text-white text-4xl focus:outline-none">&times;</button>
+        <a href="./index.html" class="text-white hover:text-yellow-400">Home</a>
+        <a href="./challenge.html" class="text-white hover:text-yellow-400">Challenge</a>
+        <a href="./dashboard.html" class="text-white hover:text-yellow-400">Dashboard</a>
+        <a href="./about.html" class="text-white hover:text-yellow-400">About</a>
+        <a href="./blog.html" class="text-white hover:text-yellow-400">Blog</a>
+        <a href="./affiliate.html" class="text-white hover:text-yellow-400">Affiliate</a>
+        <a href="./careers.html" class="text-white hover:text-yellow-400">Careers</a>
+        <a href="./awards.html" class="text-white hover:text-yellow-400">Awards</a>
+        <a href="./investors.html" class="text-white hover:text-yellow-400">Investors</a>
+        <a href="./faq.html" class="text-yellow-400 font-bold">FAQ</a>
+        <a href="./contact.html" class="text-white hover:text-yellow-400">Contact</a>
+        <div class="flex flex-col gap-4 w-full px-12 pt-6">
+            <a href="login.html" class="text-center border border-white/20 py-3 rounded-xl text-white">Login</a>
+            <a href="Get Started.html" class="text-center bg-yellow-400 text-black py-3 rounded-xl font-bold">Get Started</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeMenu = document.getElementById("close-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        const toggleMenu = (isOpen) => {
+            if (isOpen) {
+                mobileMenu.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
+                mobileMenu.classList.add("translate-x-0", "opacity-100");
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add("translate-x-full", "opacity-0", "pointer-events-none");
+                mobileMenu.classList.remove("translate-x-0", "opacity-100");
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        menuBtn.addEventListener("click", () => toggleMenu(true));
+        closeMenu.addEventListener("click", () => toggleMenu(false));
+
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+    </script>
+
+
+    <!-- Pipstone Help Center Section -->
+<section class="help-center">
+    <div class="help-wrapper">
+        <!-- Main Header -->
+        <h1 class="guide-title">The Ultimate Guide to Everything at CK Funded Pro</h1>
+
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="articleSearch" placeholder="Search for articles..." onkeyup="filterArticles()">
+        </div>
+
+        <script>
+            function filterArticles() {
+                const input = document.getElementById('articleSearch').value.toLowerCase();
+                const articles = document.querySelectorAll('.article-link');
+                const categories = document.querySelectorAll('.cat-card');
+                
+                articles.forEach(article => {
+                    const text = article.innerText.toLowerCase();
+                    article.style.display = text.includes(input) ? "flex" : "none";
+                });
+ 
+                categories.forEach(cat => {
+                    const text = cat.querySelector('h3').innerText.toLowerCase();
+                    cat.style.display = text.includes(input) ? "flex" : "none";
+                });
+ 
+                const mostViewedBox = document.querySelector('.most-viewed-box');
+                const hasVisibleArticles = Array.from(articles).some(a => a.style.display !== "none");
+                mostViewedBox.style.display = hasVisibleArticles ? "block" : "none";
+            }
+
+            const articleContent = {
+                'one-step': {
+                    title: 'What is the 1-Step Challenge?',
+                    content: `
+                        <p>Our 1-Step Evaluation is designed for traders who want to get funded quickly. It features a single phase with a 10% profit target.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Profit Target:</strong> 10%</li>
+                            <li><strong>Daily Drawdown:</strong> 4% (Balance Based)</li>
+                            <li><strong>Max Drawdown:</strong> 7% (Static)</li>
+                            <li><strong>Minimum Trading Days:</strong> 0 days (No minimum)</li>
+                            <li><strong>Leverage:</strong> 1:100</li>
+                        </ul>
+                        <p>Once you hit the 10% target without violating any rules, you will be upgraded to a Funded Account within 24-48 hours.</p>
+                    `
+                },
+                'two-step': {
+                    title: 'What is the 2-Step Challenge?',
+                    content: `
+                        <p>The 2-Step Evaluation is our most popular program, offering higher drawdown limits and more flexibility.</p>
+                        <h3 class="text-white font-bold mt-4">Phase 1: Evaluation</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Profit Target: 8%</li>
+                            <li>Max Daily Loss: 5%</li>
+                            <li>Max Total Loss: 10%</li>
+                        </ul>
+                        <h3 class="text-white font-bold mt-4">Phase 2: Verification</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Profit Target: 5%</li>
+                            <li>Max Daily Loss: 5%</li>
+                            <li>Max Total Loss: 10%</li>
+                        </ul>
+                        <p class="mt-4">Passing both phases grants you access to a funded account where you keep up to 90% of the profits.</p>
+                    `
+                },
+                'about-ck': {
+                    title: 'About CK Funded Pro',
+                    content: `
+                        <p>CK Funded Pro is a premium prop firm dedicated to finding and funding the world's best trading talent. We provide the capital, you provide the skill.</p>
+                        <p>We differ from other firms by offering:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Instant scaling plans</li>
+                            <li>No hidden rules or "consistency" traps</li>
+                            <li>Raw spread accounts with low commissions</li>
+                            <li>Fast payouts via Crypto or Bank Transfer</li>
+                        </ul>
+                    `
+                },
+                'getting-started': {
+                    title: 'How to Get Started',
+                    content: `
+                        <p>Starting your journey with CK Funded Pro is simple:</p>
+                        <ol class="list-decimal pl-5 space-y-3">
+                            <li><strong>Select Your Challenge:</strong> Choose between 1-Step, 2-Step, or Instant Funding.</li>
+                            <li><strong>Pick Your Size:</strong> Accounts range from $5,000 to $200,000.</li>
+                            <li><strong>Checkout:</strong> Pay the one-time evaluation fee via our secure payment gateway.</li>
+                            <li><strong>Receive Credentials:</strong> Check your email (and spam folder) for your MetaTrader/cTrader credentials.</li>
+                            <li><strong>Start Trading:</strong> Log in and begin your evaluation!</li>
+                        </ol>
+                    `
+                },
+                'signup': {
+                    title: 'Sign Up Process',
+                    content: `
+                        <p>To sign up, click the "Get Started" button on our homepage. You will be asked to provide your name, email, and country of residence.</p>
+                        <p>After registration, you can access your personal Dashboard where you can track your trading performance, request payouts, and purchase new challenges.</p>
+                        <p>Note: No KYC is required for the evaluation phase. KYC is only required once you become a funded trader and request your first payout.</p>
+                    `
+                },
+                'scaling': {
+                    title: 'Scaling Plans',
+                    content: `
+                        <p>Yes! We reward consistency with one of the most aggressive scaling plans in the industry.</p>
+                        <p><strong>The Plan:</strong> If you achieve a total profit of 10% or more over a 4-month period, and at least 2 of those months were profitable, we will increase your initial account balance by 25%.</p>
+                        <p>For example, a $100,000 account will be scaled to $125,000. Scaling can continue every 4 months up to a maximum of $2,000,000 per trader.</p>
+                    `
+                },
+                'general-faq': {
+                    title: 'General FAQ',
+                    content: `
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-white font-bold">What platforms do you support?</h3>
+                                <p>We support MetaTrader 4, MetaTrader 5, and cTrader through our liquidity partners.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold">Can I trade from multiple IP addresses?</h3>
+                                <p>Yes, but all IP addresses must belong to the same trader. Using VPNs is allowed as long as you are the one trading.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold">What is the minimum age to join?</h3>
+                                <p>You must be at least 18 years old to participate in our challenges.</p>
+                            </div>
+                        </div>
+                    `
+                },
+                'rules': {
+                    title: 'Evaluation and Rules',
+                    content: `
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-white font-bold">Is News Trading allowed?</h3>
+                                <p>During evaluations, yes. However, on funded accounts, there is a 2-minute window before and after high-impact news where trading is restricted.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold">Can I hold trades over the weekend?</h3>
+                                <p>Yes, weekend holding is allowed on all account types at CK Funded Pro.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold">How is daily drawdown calculated?</h3>
+                                <p>Daily drawdown is calculated based on the starting balance of the day (5:00 PM EST).</p>
+                            </div>
+                        </div>
+                    `
+                },
+                'funded': {
+                    title: 'Funded Account Details',
+                    content: `
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-white font-bold">What is the profit split?</h3>
+                                <p>Traders start with an 80% profit split, which can be increased to 90% through our VIP program.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold">When can I request a payout?</h3>
+                                <p>The first payout can be requested 14 days after your first trade on the funded account. Subsequent payouts are bi-weekly.</p>
+                            </div>
+                        </div>
+                    `
+                },
+                'payments': {
+                    title: 'Payments and Refunds',
+                    content: `
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-white font-bold">What payment methods are accepted?</h3>
+                                <p>We accept Visa, Mastercard, Apple Pay, and various cryptocurrencies (BTC, ETH, USDT).</p>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold">Can I get a refund?</h3>
+                                <p>Refunds are only available if no trades have been placed on the account within 7 days of purchase. Once a trade is placed, the fee is non-refundable.</p>
+                            </div>
+                        </div>
+                    `
+                },
+                'support': {
+                    title: 'Platform and Support',
+                    content: `
+                        <p>Our support team is available 24/7 via live chat and email.</p>
+                        <p>If you encounter technical issues with your trading platform, please contact us immediately with screenshots and logs so we can investigate.</p>
+                        <p>Email: support@ckfundedpro.com</p>
+                    `
+                },
+                'instant': {
+                    title: 'Instant Funding Challenge',
+                    content: `
+                        <p>Skip the evaluation! Our Instant Funding model allows you to trade a live-simulated account from day one.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>No Evaluation:</strong> Start earning from your first trade.</li>
+                            <li><strong>Profit Split:</strong> 50% initially, scaling up to 80%.</li>
+                            <li><strong>Drawdown:</strong> 5% static maximum drawdown.</li>
+                        </ul>
+                    `
+                },
+                'basics': {
+                    title: 'Trading Basics',
+                    content: `
+                        <div class="space-y-4">
+                            <p>New to prop trading? Here are the fundamentals:</p>
+                            <p><strong>What is a Lot?</strong> A unit of measurement for your trade size.</p>
+                            <p><strong>What is Leverage?</strong> The ability to control a large position with a small amount of capital. We offer up to 1:100.</p>
+                            <p><strong>What is Drawdown?</strong> The peak-to-trough decline in your account balance or equity.</p>
+                        </div>
+                    `
+                },
+                'refer': {
+                    title: 'Refer & Earn',
+                    content: `
+                        <p>Join our affiliate program and earn commissions for every trader you refer to CK Funded Pro.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Commission:</strong> 10% - 15% on all purchases made by your referrals.</li>
+                            <li><strong>Payouts:</strong> Paid weekly in Crypto or Bank Transfer.</li>
+                            <li><strong>Dashboard:</strong> Real-time tracking of your clicks and conversions.</li>
+                        </ul>
+                    `
+                }
+            };
+
+            function showArticle(id) {
+                const article = articleContent[id];
+                if (article) {
+                    document.getElementById('modalTitle').innerText = article.title;
+                    document.getElementById('modalContent').innerHTML = article.content;
+                    document.getElementById('articleModal').classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeModal() {
+                document.getElementById('articleModal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Close on outside click
+            window.onclick = function(event) {
+                const modal = document.getElementById('articleModal');
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        </script>
+
+        <!-- Most Viewed Articles Box -->
+<div class="most-viewed-box">
+    <h2>Most Viewed Articles</h2>
+    <div class="articles-grid">
+        <a href="javascript:void(0)" class="article-link" onclick="showArticle('one-step')">
+            What is the 1-Step Challenge and How Does It Work? 
+            <span class="chevron">›</span>
+        </a>
+        <a href="javascript:void(0)" class="article-link" onclick="showArticle('two-step')">
+            What is the 2-Step Challenge and how does it work? 
+            <span class="chevron">›</span>
+        </a>
+        <a href="javascript:void(0)" class="article-link" onclick="showArticle('about-ck')">
+            What is CK Funded Pro and How does it works? 
+            <span class="chevron">›</span>
+        </a>
+        <a href="javascript:void(0)" class="article-link" onclick="showArticle('getting-started')">
+            How to Get Started with a Funded Challenge 
+            <span class="chevron">›</span>
+        </a>
+        <a href="javascript:void(0)" class="article-link" onclick="showArticle('signup')">
+            How to Sign Up for CK Funded Pro 
+            <span class="chevron">›</span>
+        </a>
+        <a href="javascript:void(0)" class="article-link" onclick="showArticle('scaling')">
+            Does CK Funded Pro Offer Scaling Plans? 
+            <span class="chevron">›</span>
+        </a>
+    </div>
+</div>
+
+<!-- Article Modal -->
+<div id="articleModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[2000] hidden flex items-center justify-center p-4">
+    <div class="bg-[#111] border border-white/10 w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl transform transition-all">
+        <div class="p-8 border-b border-white/5 flex justify-between items-center">
+            <h2 id="modalTitle" class="text-2xl font-bold text-[#ffb400]">Article Title</h2>
+            <button onclick="closeModal()" class="text-gray-500 hover:text-white text-3xl">&times;</button>
+        </div>
+        <div id="modalContent" class="p-8 max-h-[60vh] overflow-y-auto text-gray-300 leading-relaxed space-y-4">
+            <!-- Content will be injected here -->
+        </div>
+        <div class="p-6 bg-white/5 text-center">
+            <p class="text-sm text-gray-500">Was this article helpful? <button class="text-[#ffb400] ml-2">Yes</button> / <button class="text-gray-400 ml-2">No</button></p>
+        </div>
+    </div>
+</div>
+
+       <!-- Category Cards Grid -->
+<div class="category-grid">
+    <!-- General FAQ -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('general-faq')">
+        <div class="cat-icon-box blue">🌐</div>
+        <div class="cat-text">
+            <h3>General FAQ</h3>
+            <p>Common questions</p>
+        </div>
+    </a>
+
+    <!-- Evaluation -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('rules')">
+        <div class="cat-icon-box gray">📚</div>
+        <div class="cat-text">
+            <h3>Evaluation and Rules</h3>
+            <p>The dos and don'ts</p>
+        </div>
+    </a>
+
+    <!-- Funded Account -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('funded')">
+        <div class="cat-icon-box white">📄</div>
+        <div class="cat-text">
+            <h3>Funded Account</h3>
+            <p>After you pass</p>
+        </div>
+    </a>
+
+    <!-- Payments -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('payments')">
+        <div class="cat-icon-box gold">🤝</div>
+        <div class="cat-text">
+            <h3>Payments and Refunds</h3>
+            <p>Financial details</p>
+        </div>
+    </a>
+
+    <!-- Support -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('support')">
+        <div class="cat-icon-box gold">⭐</div>
+        <div class="cat-text">
+            <h3>Platform and Support</h3>
+        </div>
+    </a>
+
+    <!-- 1-Step -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('one-step')">
+        <div class="cat-icon-box orange">📊</div>
+        <div class="cat-text">
+            <h3>1-Step Challenge</h3>
+            <p>Guidelines</p>
+        </div>
+    </a>
+
+    <!-- 2-Step -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('two-step')">
+        <div class="cat-icon-box orange">📊</div>
+        <div class="cat-text">
+            <h3>2-Step Challenge</h3>
+            <p>Process</p>
+        </div>
+    </a>
+
+    <!-- Instant Funding -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('instant')">
+        <div class="cat-icon-box orange">📊</div>
+        <div class="cat-text">
+            <h3>Instant Funding</h3>
+            <p>Direct access</p>
+        </div>
+    </a>
+    
+    <!-- Trading Basics -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('basics')">
+        <div class="cat-icon-box blue">🖥️</div>
+        <div class="cat-text">
+            <h3>Trading Basics</h3>
+            <p>Learn to trade</p>
+        </div>
+    </a>
+
+    <!-- Refer & Earn -->
+    <a href="javascript:void(0)" class="cat-card" onclick="showArticle('refer')">
+        <div class="cat-icon-box white">👥</div>
+        <div class="cat-text">
+            <h3>Refer & Earn</h3>
+            <p>Affiliate program</p>
+        </div>
+    </a>
+</div>
+</section>
+
+<style>
+    /* Section Setup */
+    .help-center {
+        padding: 140px 20px 60px;
+        background: transparent;
+        color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        text-align: center;
+    }
+
+    .help-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .guide-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        letter-spacing: -0.5px;
+    }
+
+    /* Search Bar Styles */
+    .search-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto 40px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+    .search-container input {
+        width: 100%;
+        padding: 18px 18px 18px 50px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+    }
+
+    /* Most Viewed Box Styles */
+    .most-viewed-box {
+        background: #0f0f0f;
+        border: 1px solid #1a1a1a;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .most-viewed-box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 40px;
+    }
+
+    .article-link {
+        color: #bbb;
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        transition: color 0.2s;
+    }
+
+    .article-link:hover { color: #ffb400; }
+    .chevron { color: #ffb400; font-size: 1.2rem; }
+
+    /* Category Cards Grid Styles */
+    .category-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .cat-card {
+        background: #0f0f0f;
+        border: 1px solid #1a1a1a;
+        border-radius: 16px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .cat-card:hover {
+        transform: translateY(-3px);
+        border-color: #333;
+    }
+
+    .cat-icon-box {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .cat-text h3 { font-size: 1.05rem; margin: 0 0 5px 0; font-weight: 500; }
+    .cat-text p { font-size: 0.85rem; color: #888; margin: 0; }
+
+    /* Icon specific colors for Pipstone brand */
+    .gold { color: #ffb400; }
+    .orange { color: #ff6b00; }
+    .blue { color: #007aff; }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .help-center { padding-top: 100px; }
+        .articles-grid, .category-grid { grid-template-columns: 1fr; }
+        .guide-title { font-size: 1.8rem; }
+    }
+</style>
+
+    <!-- START FOOTER -->
+    <footer class="bg-black pt-24 pb-12 border-t border-white/5 relative z-10">
+    <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-12 gap-12 mb-16">
+        <div class="lg:col-span-5">
+    <div class="flex items-center gap-3 mb-8">
+        <img src="logo.jpeg" alt="Icon" class="h-10 w-auto rounded-lg">
+        <span class="text-white font-black italic tracking-tighter text-2xl uppercase">
+            CK FUNDED <span class="text-[#ffb800]">PRO</span>
+        </span>
+    </div>
+    
+    <hr class="border-white/10 mb-8 w-full max-w-[300px]">
+
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/ckfundedpro" target="_blank" class="text-[#ffb800] hover:opacity-80 transition-all">
+                        <i class="fa-brands fa-instagram text-3xl" style="color: #ffb800;" style="color: #ffb800;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ckfundedpro" target="_blank" class="text-[#ffb800] hover:opacity-80 transition-all">
+                        <i class="fa-brands fa-facebook text-3xl" style="color: #ffb800;" style="color: #ffb800;"></i>
+                    </a>
+                    <a href="https://discord.gg/ckfunded" target="_blank" class="text-[#ffb800] hover:opacity-80 transition-all">
+                        <i class="fa-brands fa-discord text-3xl" style="color: #ffb800;" style="color: #ffb800;"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ckfundedpro" target="_blank" class="text-[#ffb800] hover:opacity-80 transition-all">
+                        <i class="fa-brands fa-youtube text-3xl" style="color: #ffb800;" style="color: #ffb800;"></i>
+                    </a>
+                    <a href="https://x.com/ckfundedpro" target="_blank" class="text-[#ffb800] hover:opacity-80 transition-all">
+                        <i class="fa-brands fa-x-twitter text-3xl" style="color: #ffb800;" style="color: #ffb800;"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ckfundedpro" target="_blank" class="text-[#ffb800] hover:opacity-80 transition-all">
+                        <i class="fa-brands fa-tiktok text-3xl" style="color: #ffb800;" style="color: #ffb800;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <h4 class="text-white font-bold text-lg mb-6">Main</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="challenge.html" class="hover:text-white transition-colors">Challenges</a></li>
+                    <li><a href="affiliate.html" class="hover:text-white transition-colors">Affiliate Program</a></li>
+                    <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="investors.html" class="hover:text-white transition-colors">Investors</a></li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-2">
+                <h4 class="text-white font-bold text-lg mb-6">Secondary</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="blog.html" class="hover:text-white transition-colors">Blogs</a></li>
+                    <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="awards.html" class="hover:text-white transition-colors">Awards</a></li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-3">
+                <h4 class="text-white font-bold text-lg mb-6">Extra</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#restricted-countries" class="hover:text-white transition-colors">Restricted Countries</a></li>
+                    <li><a href="#terms" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                    <li><a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="space-y-6 text-gray-500 text-[11px] leading-relaxed max-w-none mb-16 border-t border-white/5 pt-12">
+            <p>CK Funded Pro is a trader evaluation and educational platform. We are not a brokerage, financial institution, or provider of investment services. All activities on our platform take place in a fully simulated environment for skill assessment and educational purposes only. No real capital is traded, and users do not receive access to live trading accounts.</p>
+            <p>Our programs are designed to evaluate a participant’s trading discipline, risk management, and consistency using demo-based performance models. Any references to compensation, rewards, or payouts are based solely on performance in simulated environments and do not represent trading profits or returns.</p>
+            <p>CK Funded Pro operates as a tech-enabled evaluation service. All program fees are final, non-refundable, and solely cover operational services such as platform access, support, and infrastructure. These fees are not considered deposits or investments.</p>
+            <p>The content provided on ckfundedpro.com is for general informational and educational purposes only and should not be interpreted as financial or investment advice. By using our platform, you agree to be bound by our terms and acknowledge that we do not conduct any regulated financial activities.</p>
+        </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-gray-500 text-xs mr-2">Secured Payment</span>
+                <div class="flex gap-4 items-center bg-white/5 p-2 px-4 rounded-lg text-white/70">
+                     <i class="fa-brands fa-cc-visa text-2xl hover:text-white transition-colors" style="color: rgba(255, 255, 255, 0.7);"></i>
+        
+                     <i class="fa-brands fa-cc-mastercard text-2xl hover:text-white transition-colors" style="color: rgba(255, 255, 255, 0.7);"></i>
+        
+                     <i class="fa-brands fa-cc-paypal text-2xl hover:text-white transition-colors" style="color: rgba(255, 255, 255, 0.7);"></i>
+        
+                      <i class="fa-brands fa-cc-apple-pay text-2xl hover:text-white transition-colors" style="color: rgba(255, 255, 255, 0.7);"></i>
+        
+                     <i class="fa-brands fa-bitcoin text-2xl hover:text-white transition-colors" style="color: rgba(255, 255, 255, 0.7);"></i>
+                  </div>
+            </div>
+
+         </div>
+</footer>
+
+        <!-- CK Funded Pro Live Chat Section -->
+        <div class="chat-wrapper">
+            <!-- Chat Toggle Button (The Launcher) -->
+            <button class="chat-launcher" onclick="toggleChat()">
+                <span class="chat-icon">💬</span>
+            </button>
+
+            <!-- Chat Window Interface -->
+            <div class="chat-window" id="chatWindow">
+                <div class="chat-header">
+                    <div class="header-info">
+                        <div class="status-dot"></div>
+                        <h3>CK Funded Pro Support</h3>
+                    </div>
+                    <button class="close-chat" onclick="toggleChat()">×</button>
+                </div>
+
+                <div class="chat-body" id="chatBody">
+                    <div class="message bot-message">
+                        Hello! How can we help you with your funding challenge today?
+                    </div>
+                </div>
+
+                <div class="chat-footer">
+                    <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKey(event)">
+                    <!-- Enter Cursor / Send Button -->
+                    <button class="send-btn" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLACE YOUR BOT SCRIPT (E.G., TAWK.TO) HERE -->
+        <!-- 
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> 
+-->
+
+        <style>
+            /* Styling for CK Funded Pro Theme */
+            .chat-wrapper {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-index: 9999;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            }
+
+            /* Launcher Button */
+            .chat-launcher {
+                width: 60px;
+                height: 60px;
+                background-color: #ffb400;
+                /* Signature Gold */
+                border-radius: 50%;
+                border: none;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                transition: transform 0.3s ease;
+            }
+
+            .chat-launcher:hover {
+                transform: scale(1.1);
+            }
+
+            /* Chat Window */
+            .chat-window {
+                position: fixed;
+                bottom: 100px;
+                right: 20px;
+                width: 350px;
+                max-width: calc(100vw - 40px);
+                height: 450px;
+                max-height: calc(100vh - 140px);
+                background: #121212;
+                /* Dark Theme */
+                border-radius: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                display: none;
+                /* Hidden by default */
+                flex-direction: column;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                z-index: 10000;
+            }
+
+            .chat-header {
+                background: #1a1a1a;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #333;
+            }
+
+            .header-info {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .status-dot {
+                width: 8px;
+                height: 8px;
+                background: #4caf50;
+                border-radius: 50%;
+            }
+
+            .chat-header h3 {
+                font-size: 0.95rem;
+                color: #fff;
+                margin: 0;
+            }
+
+            .close-chat {
+                background: none;
+                border: none;
+                color: #888;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            .chat-body {
+                flex: 1;
+                padding: 15px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .message {
+                max-width: 80%;
+                padding: 10px 14px;
+                border-radius: 12px;
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .bot-message {
+                background: #333;
+                color: #fff;
+                align-self: flex-start;
+            }
+
+            .user-message {
+                background: #ffb400;
+                color: #000;
+                align-self: flex-end;
+            }
+
+            /* Footer & Input */
+            .chat-footer {
+                padding: 15px;
+                background: #1a1a1a;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .chat-footer input {
+                flex: 1;
+                background: #222;
+                border: 1px solid #444;
+                border-radius: 20px;
+                padding: 8px 15px;
+                color: #fff;
+                outline: none;
+            }
+
+            .send-btn {
+                background: none;
+                border: none;
+                color: #ffb400;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transition: transform 0.2s;
+            }
+
+            .send-btn:hover {
+                transform: translateX(3px);
+            }
+
+            @media (max-width: 768px) {
+                .chat-wrapper {
+                    bottom: 20px;
+                    right: 20px;
+                }
+
+                .chat-launcher {
+                    width: 52px;
+                    height: 52px;
+                    font-size: 22px;
+                }
+
+                .chat-window {
+                    width: min(90vw, 320px);
+                    height: min(80vh, 380px);
+                    right: 10px;
+                    bottom: 80px;
+                }
+
+                .chat-header {
+                    padding: 12px;
+                }
+
+                .chat-footer {
+                    padding: 10px;
+                }
+
+                .chat-footer input {
+                    padding: 8px 12px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .chat-wrapper {
+                    bottom: 15px;
+                    right: 15px;
+                }
+
+                .chat-launcher {
+                    width: 48px;
+                    height: 48px;
+                    font-size: 20px;
+                }
+
+                .chat-window {
+                    width: min(92vw, 280px);
+                    height: min(78vh, 320px);
+                    right: 10px;
+                    bottom: 70px;
+                }
+
+                .chat-header {
+                    padding: 10px;
+                }
+
+                .chat-header h3 {
+                    font-size: 0.85rem;
+                }
+
+                .chat-footer {
+                    padding: 8px;
+                    gap: 8px;
+                }
+
+                .chat-footer input {
+                    padding: 7px 10px;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+
+        <script>
+            function toggleChat() {
+                const win = document.getElementById('chatWindow');
+                win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
+            }
+
+            function handleKey(e) {
+                if (e.key === 'Enter') sendMessage();
+            }
+
+            function sendMessage() {
+                const input = document.getElementById('userInput');
+                const body = document.getElementById('chatBody');
+
+                if (input.value.trim() !== "") {
+                    // Add User Message
+                    const msg = document.createElement('div');
+                    msg.className = 'message user-message';
+                    msg.innerText = input.value;
+                    body.appendChild(msg);
+
+                    // Clear Input and Scroll
+                    input.value = "";
+                    body.scrollTop = body.scrollHeight;
+
+                    // Optional: Connect this to your Tawk_API.sendMessage() if using a real bot
+                }
+            }
+        </script>
+
+</body>
+</html>
